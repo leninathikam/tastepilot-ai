@@ -6,7 +6,7 @@
 - [x] Unknown venue facts remain provisional; no booking or satisfaction guarantees.
 - [x] Secret-free baseline archived before release changes.
 - [x] Heroku remote-build manifest and owner deployment instructions prepared.
-- [ ] Public repository URL and license verified after push.
+- [x] Public repository URL and MIT license verified after push; remote CI including Docker smoke passed.
 - [ ] Owner completes Heroku deployment and confirms paid plan/configuration.
 - [ ] Public HTTPS demo works from a clean browser on desktop and mobile.
 - [ ] Hosted real Qloo discovery, explanation, constraint revision and invalid inputs verified.

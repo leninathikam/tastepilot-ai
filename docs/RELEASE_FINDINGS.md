@@ -29,3 +29,5 @@ Security work keeps one Python worker and one web service. Per-process limits re
 ## Official requirements checked
 
 The [overview](https://qloo.devpost.com/) explicitly requires externally hosted public access and says videos are optional. The [rules](https://qloo.devpost.com/rules) require working Qloo agentic use, public licensed source, description and free judge access through November 5, 11:45 p.m. Eastern. Four criteria are equally weighted; initial viability is pass/fail. [Resources](https://qloo.devpost.com/resources) links the [official kit](https://github.com/qloo/qloo-hackathon-kit). A controlled tool workflow is our actual architecture; do not call it autonomous multi-agent reasoning.
+
+Final release checks: 53 backend tests (1.46s), 12 desktop/mobile browser tests (49.1s), component test and production build passed. GitHub CI run 41081525719 also passed the Linux Docker build/startup. Four-profile live rehearsal returned 20 candidates with nine Qloo calls and no fair/mean objective difference. This is not a quality benchmark. Public app verification remains pending owner deployment.

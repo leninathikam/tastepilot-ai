@@ -1,3 +1,7 @@
+# Owner decision
+
+Owner authorized preparation and public GitHub push and will deploy personally. No Heroku resource was created. The proposal below is historical context; see DEPLOYMENT.md for the handoff.
+
 # Heroku deployment proposal — approval required
 
 Owner selected Heroku. The Render proposal and blueprint are superseded.

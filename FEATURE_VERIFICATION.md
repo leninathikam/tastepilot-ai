@@ -24,8 +24,8 @@ Statuses describe actual implementation and evidence, not intended features. Uni
 | Same-pool taste ablation | Implemented; synthetic evaluation and live execution verified | Single and group evaluation; live value unknown |
 | Qloo-versus-LLM quality benchmark | Missing | No live corpus, LLM-only baseline or blinded human review |
 | Runtime invariants / timeout / retry bounds | Fully implemented within tested scope | Budget/source/duplicates/requirements checked without assert; 60-second plan timeout; long Retry-After fails rather than retrying early |
-| CI and combined deployment packaging | Implemented but not verified | Workflow and multi-stage Dockerfile exist; no remote CI or running Docker engine |
-| Public repository / public hosted demo | Missing | No Git remote or deployed URL |
+| CI and combined deployment packaging | Verified in GitHub CI | Remote Docker build/startup, backend, frontend and browser checks passed; Heroku host not tested |
+| Public repository / public hosted demo | Partially implemented | Public GitHub source and MIT verified; owner will deploy to Heroku; no public app URL |
 | Authentication, persistence, distributed rate limiting | Missing | Not needed to demonstrate the core locally; operational safeguards remain before public access |
 
 See EVALUATION_RESULTS.md for measured results and SUBMISSION_READINESS.md for remaining gates.

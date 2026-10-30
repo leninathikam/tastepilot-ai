@@ -6,7 +6,7 @@ TastePilot connects named cultural favorites to place discovery, then applies pr
 
 ## Status â€” read first
 
-Local implementation with an explicit fictional Chicago simulation. Live Qloo search, Chicago discovery, scoped per-person scoring and the group browser workflow were verified on October 30. Practical venue facts remain unverified. Public deployment is not complete; source publication is part of the release handoff. This is not yet a submission-ready live Qloo product. There are no claims of improved recommendation quality or real users.
+Local implementation with an explicit fictional Chicago simulation. Live Qloo search, Chicago discovery, scoped per-person scoring and the group browser workflow were verified on October 30. Practical venue facts remain unverified. Public deployment is not complete; public source and MIT license are verified at https://github.com/leninathikam/tastepilot-ai. This is not yet a submission-ready live Qloo product. There are no claims of improved recommendation quality or real users.
 
 ## What works
 
@@ -87,10 +87,12 @@ See docs/TEST_RESULTS.md for executed results and docs/EVALUATION.md for scope. 
 Owner-operated Heroku deployment: [open the deployment form](https://heroku.com/deploy?template=https://github.com/leninathikam/tastepilot-ai). Review the one Basic dyno ($7/month) and provider charges before deploying. See [step-by-step instructions](docs/DEPLOYMENT.md). Never paste keys into source.
 
 
-See docs/DEPLOYMENT.md. Dockerfile packages a standalone Next frontend and an internal FastAPI backend on one public port. Container execution is not verified: the local Docker engine is unavailable. CI is configured but has not run remotely. No paid resources are authorized. Publishing requires explicit owner approval. See SUBMISSION_READINESS.md for release gates.
+See docs/DEPLOYMENT.md. Dockerfile packages a standalone Next frontend and an internal FastAPI backend on one public port. Remote GitHub CI passed the Docker build and startup smoke; the local Docker engine is unavailable. Heroku deployment remains owner-operated and unverified. No paid resources are authorized. Publishing requires explicit owner approval. See SUBMISSION_READINESS.md for release gates.
 
 ## Limits
 
 Live place prices, booking availability, hours, routing, accessibility and dietary suitability are not verified. Unknown costs are excluded from confirmed plans and surfaced as provisional discoveries, including provisional group compromises. No live venue enrichment provider is connected. A live result can therefore contain a useful shortlist but no confirmed itinerary. Event quota, expiry and data retention rights need confirmation. Search resolves unique exact names only. Group coverage is an algorithmic proxy, not measured satisfaction. No timed routing, human quality evaluation or LLM-only benchmark exists yet. No user profiles are persisted; request contents are not logged. Public hosting needs edge rate limiting and operational monitoring.
 
 MIT license covers project code, not Qloo data or trademarks.
+
+Final evidence: [FINAL_RELEASE_REPORT.md](FINAL_RELEASE_REPORT.md). Authentic screenshots: [docs/screenshots](docs/screenshots).
