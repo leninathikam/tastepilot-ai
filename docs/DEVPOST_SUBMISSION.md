@@ -29,7 +29,7 @@ See evaluation/results/aggregate.json and docs/TEST_RESULTS.md for executed loca
 The intended benefit is less repetitive search and more transparent personalization. Group negotiation now compares bounded max-min and mean-coverage selections with per-member evidence. Next steps are practical venue verification, public hosting and blinded evaluation.
 
 ## Required links
-- Public application: PENDING
+- Public application: https://tastepilot-ai-43e15cc919d5.herokuapp.com/
 - Public source repository: https://github.com/leninathikam/tastepilot-ai
 - License: MIT, LICENSE in repository root
 - Setup and testing: README.md

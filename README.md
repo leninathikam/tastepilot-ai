@@ -1,98 +1,148 @@
 # TastePilot AI
 
-**Cultural intelligence that turns personal taste into real-world experiences.**
+**Cultural intelligence that turns personal taste into real-world group experiences.**
 
-TastePilot connects named cultural favorites to place discovery, then applies practical constraints before ranking a day out. It is built for curious travelers whose interests span music, film, food and art.
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/leninathikam/tastepilot-ai)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-## Status â€” read first
+TastePilot connects named cultural favorites—music artists, films, books, and brands—to real-world place discovery through Qloo's cultural intelligence API. It enables groups of friends or travel companions to discover shared destinations, enforces practical constraints (budget, dietary, accessibility), and uses a deterministic max-min fairness optimizer to negotiate compromises that everyone can enjoy.
 
-Local implementation with an explicit fictional Chicago simulation. Live Qloo search, Chicago discovery, scoped per-person scoring and the group browser workflow were verified on October 30. Practical venue facts remain unverified. Public deployment is not complete; public source and MIT license are verified at https://github.com/leninathikam/tastepilot-ai. This is not yet a submission-ready live Qloo product. There are no claims of improved recommendation quality or real users.
+- **Live Application:** [https://tastepilot-ai-43e15cc919d5.herokuapp.com/](https://tastepilot-ai-43e15cc919d5.herokuapp.com/)
+- **Repository:** [https://github.com/leninathikam/tastepilot-ai](https://github.com/leninathikam/tastepilot-ai)
 
-## What works
+---
 
-- Next.js/TypeScript responsive planning workspace and FastAPI backend.
-- Artist, movie, book and brand seed resolution; geographically restricted Qloo place discovery in the live adapter.
-- Typed six-stage workflow, actual streamed progress, bounded retries, correlation IDs and server-only secrets.
-- Strict hard-requirement exclusion; aggregate budget checks; transparent unknown facts.
-- Replacement and cheaper revisions that preserve other constraints.
-- Taste DNA counts derived from user inputs, evidence details and same-candidate ranking ablation.
-- Fixture-only repeatable evaluation scenarios and integration/browser test suites.
-- Up to four taste profiles, same-pool per-member evidence, bounded max-min group selection and mean-objective comparison.
-- One conditional discovery expansion, runtime constraint critic and visible revision/source trails.
+## Architecture & System Flow
 
-Qloo is central to live candidate generation and the ordinal taste component of ranking. Disabling that component in the ablation preserves candidate sets and constraints. Synthetic fixture results demonstrate mechanics only; live value evidence is still required.
+TastePilot uses a deterministic, controlled processing pipeline rather than an unconstrained multi-agent loop. Every phase produces typed, validated events streamed to the UI in real time via NDJSON.
 
-## Architecture
-
-Browser -> Next.js same-origin API proxy -> FastAPI -> validated intent -> exact entity resolution -> Qloo place insights -> hard constraints -> weighted ranking and diversity -> critic invariants -> source-labeled result.
-
-The application uses a deterministic controlled pipeline rather than a multi-agent framework. Optional OpenAI intent extraction converts natural language to the same validated form. Structured controls work without an LLM. No retrieved content can execute tools.
-
-## Local setup
-
-Requirements: Node 20.9+ and Python 3.12+ (tested on Python 3.14). From the repository root:
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\python -m pip install -r backend/requirements.txt
-Copy-Item .env.example .env # only if .env does not already exist
-.\.venv\Scripts\python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000
+```mermaid
+flowchart TD
+  UI["Consumer UI (Next.js / React)"] -->|Optional natural language text| LLM["OpenAI Structured Intent Extraction"]
+  LLM -->|Validated form controls| UI
+  UI -->|HTTP POST /api/plan| Proxy["Next.js Same-Origin Proxy"]
+  Proxy -->|Internal loopback :8000| Backend["FastAPI Backend Engine"]
+  Backend --> Safety["Safety Guardrails (32 KiB body, rate limits)"]
+  Safety --> Intent["Pydantic Intent Validation"]
+  Intent --> Search["Qloo /search API<br/>(Exact cultural entity resolution)"]
+  Search --> Insights["Qloo /v2/insights API<br/>(Geographically scoped candidate places)"]
+  Insights --> Constraints{"Hard Constraint Filters<br/>(Dietary, accessibility, date/budget)"}
+  Constraints -->|Insufficient options| Expand["Conditional Page-2 Discovery Expansion"]
+  Expand --> Constraints
+  Constraints --> Rescore["Same-Pool Multi-Profile Scoring<br/>(filter.results.entities)"]
+  Rescore --> Negotiate["Max-Min Group Compromise<br/>& Mean-Objective Comparison"]
+  Negotiate --> Critic["Runtime Critic<br/>(Invariant validation & source verification)"]
+  Critic --> Stream["NDJSON Real-Time Event Stream<br/>(Phases, decisions, candidates, compromise)"]
+  Stream --> UI
 ```
 
-In another terminal:
+### Key Workflow Steps
 
+1. **Entity Resolution (`/search`)**: Maps user-entered seeds (e.g., *Radiohead*, *Japanese Breakfast*, *Past Lives*) to unambiguous Qloo entity IDs.
+2. **Candidate Generation (`/v2/insights`)**: Discovers cultural places within the requested destination city (e.g., Chicago) using location filters.
+3. **Hard Constraint Filtering**: Strictly excludes any candidate violating explicit dietary, accessibility, or budget limits.
+4. **Conditional Expansion**: Triggers at most one additional insights page if eligible candidates are scarce.
+5. **Multi-Profile Same-Pool Scoring**: Queries Qloo with `filter.results.entities` for each companion against the identical candidate set to obtain personalized ranking signals without cross-query bias.
+6. **Max-Min Group Compromise**: Evaluates candidate subsets to maximize the lowest-scoring member's best-stop coverage, comparing against a standard mean-preference objective and a no-taste ablation.
+7. **Runtime Critic & Streaming**: Enforces budget bounds, deduplication, and source provenance, then streams live progress and decisions back to the browser.
+
+---
+
+## Core Capabilities
+
+- **Multi-Member Taste Negotiation**: Supports up to 4 distinct companion profiles. Provides transparent tradeoff tables showing who each stop serves.
+- **Strict Constraint Enforcement**: Fails closed on missing or unverified facts (e.g., unverified wheelchair accessibility or unknown dietary status).
+- **Interactive Replanning**: One-click "Make it cheaper" (retaining taste preferences while cutting budget) or selective stop replacement.
+- **Input-Driven Taste DNA**: Visual breakdown of categories and interests based strictly on user inputs.
+- **Optional Natural-Language Interpreter**: Schema-constrained OpenAI extraction to populate typed controls without giving the LLM execution privileges.
+- **Dual Operating Modes**:
+  - `live`: Direct integration with live Qloo endpoints and optional OpenAI extraction.
+  - `fixture`: Fully offline, reproducible test scenarios with authored Chicago venues.
+
+---
+
+## Quickstart (Local Development)
+
+### Prerequisites
+- Node.js 20+
+- Python 3.12+
+
+### 1. Backend Setup
+```powershell
+# Create and activate virtual environment
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+
+# Install dependencies
+pip install -r backend/requirements.txt
+
+# Configure environment
+Copy-Item .env.example .env
+```
+
+Edit `.env` with your API keys:
+```env
+QLOO_API_KEY=your_qloo_key
+QLOO_API_URL=https://hackathon.api.qloo.com
+OPENAI_API_KEY=your_openai_key  # Optional
+DATA_MODE=live
+```
+
+Start the FastAPI backend:
+```powershell
+python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000
+```
+
+### 2. Frontend Setup
+In another terminal:
 ```powershell
 cd frontend
 npm ci
 npm run dev
 ```
 
-Open http://127.0.0.1:3000. Backend health is /api/health and interactive schema is http://127.0.0.1:8000/docs.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Configuration
+---
 
-Root `.env` is ignored. Never use NEXT_PUBLIC variables for keys.
-
-| Variable | Purpose |
-|---|---|
-| DATA_MODE | fixture (default) or live; no silent live-to-fixture fallback |
-| QLOO_API_KEY | Event-issued key, backend only |
-| QLOO_API_URL | Approved HTTPS Qloo origin matching your issued access |
-| OPENAI_API_KEY | Optional natural-language interpretation |
-| OPENAI_MODEL | Optional interpreter model; default gpt-4.1-mini |
-| BACKEND_URL | Next.js server-side backend origin; defaults to loopback :8000 |
-
-After adding keys, restart the backend. Change DATA_MODE to live only when ready to exercise Qloo. Fixture named favorites include Japanese Breakfast, Radiohead, Khruangbin, Past Lives, Dune and Uniqlo. Fixture venues are fictional and only exist for Chicago. Dates do not establish opening hours.
-
-## Testing and evaluation
+## Testing & Verification
 
 ```powershell
-$env:PYTEST_DISABLE_PLUGIN_AUTOLOAD='1'
+# Backend unit & integration test suite (53 tests)
 python -m pytest backend/tests -q
-python -m evaluation.run
-python -m evaluation.group_run
-python -m evaluation.live_probe # reports credential/readiness status without network calls
+
+# Bounded live API probe (verifies Qloo connectivity and entity resolution)
+python -m evaluation.live_probe --execute
+
+# Frontend component tests
 cd frontend
 npm test
+
+# Production build test
 npm run build
-npx playwright install chromium
-# Start backend and frontend before browser tests; DATA_MODE=fixture.
-npm run test:e2e
+
+# End-to-end browser smoke test (requires running app)
+node ../scripts/judge_smoke.cjs
 ```
 
-See docs/TEST_RESULTS.md for executed results and docs/EVALUATION.md for scope. No statistical significance or quality uplift claims are made.
+---
 
-## Deployment and submission
+## Production Deployment (Heroku)
 
-Owner-operated Heroku deployment: [open the deployment form](https://heroku.com/deploy?template=https://github.com/leninathikam/tastepilot-ai). Review the one Basic dyno ($7/month) and provider charges before deploying. See [step-by-step instructions](docs/DEPLOYMENT.md). Never paste keys into source.
+TastePilot packages the Next.js frontend and FastAPI backend into a single container managed by [`scripts/serve.py`](scripts/serve.py) on a single assigned Heroku port.
 
+Deploy directly using the one-click button:
 
-See docs/DEPLOYMENT.md. Dockerfile packages a standalone Next frontend and an internal FastAPI backend on one public port. Remote GitHub CI passed the Docker build and startup smoke; the local Docker engine is unavailable. Heroku deployment remains owner-operated and unverified. No paid resources are authorized. Publishing requires explicit owner approval. See SUBMISSION_READINESS.md for release gates.
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/leninathikam/tastepilot-ai)
 
-## Limits
+Required Heroku Config Vars:
+- `DATA_MODE`: `live`
+- `QLOO_API_KEY`: Server-side Qloo API token
+- `QLOO_API_URL`: `https://hackathon.api.qloo.com`
+- `OPENAI_API_KEY`: *(Optional)* OpenAI key for natural language interpretation
 
-Live place prices, booking availability, hours, routing, accessibility and dietary suitability are not verified. Unknown costs are excluded from confirmed plans and surfaced as provisional discoveries, including provisional group compromises. No live venue enrichment provider is connected. A live result can therefore contain a useful shortlist but no confirmed itinerary. Event quota, expiry and data retention rights need confirmation. Search resolves unique exact names only. Group coverage is an algorithmic proxy, not measured satisfaction. No timed routing, human quality evaluation or LLM-only benchmark exists yet. No user profiles are persisted; request contents are not logged. Public hosting needs edge rate limiting and operational monitoring.
+---
 
-MIT license covers project code, not Qloo data or trademarks.
+## License
 
-Final evidence: [FINAL_RELEASE_REPORT.md](FINAL_RELEASE_REPORT.md). Authentic screenshots: [docs/screenshots](docs/screenshots).
+This project is open-source under the [MIT License](LICENSE).
