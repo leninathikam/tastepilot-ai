@@ -1,0 +1,14 @@
+{
+  "name": "TastePilot AI",
+  "description": "Qloo-powered group cultural discovery with transparent compromise and provisional venue facts.",
+  "repository": "https://github.com/leninathikam/tastepilot-ai",
+  "stack": "container",
+  "formation": {"web": {"quantity": 1, "size": "basic"}},
+  "env": {
+    "DATA_MODE": {"value": "live"},
+    "QLOO_API_URL": {"value": "https://hackathon.api.qloo.com"},
+    "QLOO_API_KEY": {"description": "Your Qloo key; server-only", "required": true},
+    "OPENAI_API_KEY": {"description": "Optional: enables text-to-form edits", "required": false},
+    "OPENAI_MODEL": {"value": "gpt-4.1-mini"}
+  }
+}

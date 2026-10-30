@@ -1,0 +1,18 @@
+{
+  "scope": "Synthetic group algorithm checks; no live Qloo or LLM calls",
+  "scenario_count": 15,
+  "expected_outcomes": 15,
+  "completed_plans": 14,
+  "nonempty_itineraries": 12,
+  "empty_itineraries": 2,
+  "budget_pass": 14,
+  "hard_constraints_pass": 14,
+  "minimum_coverage_not_worse_than_mean": 14,
+  "strict_fairness_improvement": 2,
+  "taste_ablation_changes_selection": 8,
+  "stable_selection": 14,
+  "live_qloo_verified": false,
+  "llm_baseline": "NOT RUN",
+  "human_satisfaction": "NOT MEASURED",
+  "warning": "Safety passes on empty plans are not planning success. Fairness is an optimized proxy, not measured satisfaction."
+}

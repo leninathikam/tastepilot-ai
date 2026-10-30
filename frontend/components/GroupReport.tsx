@@ -1,0 +1,16 @@
+import { Result } from '../lib/types';
+export function GroupReport({result}:{result:Result}){
+  const group=result.group;if(!group)return null;
+  const all=[...result.itinerary,...result.alternatives];
+  const name=(id:string)=>all.find(c=>c.id===id)?.name||id;
+  const sameChoice=[...group.selected_ids].sort().join(',')===[...group.mean_objective.ids].sort().join(',');
+  return <section className="group-report" aria-labelledby="compromise-title"><div className="eyebrow">A thoughtful compromise</div><h3 id="compromise-title">A day everyone has a part in.</h3><p>{group.is_provisional?'These are provisional group discoveries. Prices and visit details still need checking.':'The planner balances each profile’s strongest represented interest across the selected stops.'} {result.mode==='fixture'?'All taste signals here are synthetic examples.':''}</p>
+    <div className="coverage-grid">{Object.entries(group.fair.member_coverage).map(([label,value])=><div key={label}><span>{label}</span><strong>{value.toFixed(2)}</strong><div className="coverage-bar"><i style={{width:`${value*100}%`}}/></div><small>Modeled best-stop coverage</small></div>)}</div>
+    <p className="group-disclaimer">These numbers are relative algorithmic proxies, not satisfaction percentages or a prediction about a person.</p>
+    <p className="tradeoff-summary">{sameChoice?'Both objectives chose the same places. There is no different compromise to claim for this result.':'The objectives chose different places. Compare who gains representation and who gives some up below.'}</p>
+    <table className="tradeoff-table"><caption>Each person’s best-stop coverage, on the same candidate pool</caption><thead><tr><th scope="col">Person</th><th scope="col">Mean choice</th><th scope="col">Fair choice</th><th scope="col">Change</th></tr></thead><tbody>{Object.entries(group.fair.member_coverage).map(([label,value])=>{const average=group.mean_objective.member_coverage[label]??0;const delta=value-average;return <tr key={label}><th scope="row">{label}</th><td>{average.toFixed(2)}</td><td>{value.toFixed(2)}</td><td>{delta>0?'+':''}{delta.toFixed(2)}</td></tr>;})}</tbody></table>
+    {group.modeled_profiles<group.party_size&&<p className="warning">Only {group.modeled_profiles} of {group.party_size} people have taste profiles. The remaining people’s preferences are not modeled.</p>}
+    <div className="group-choices"><div><h4>Balanced compromise</h4><p>{group.selected_ids.map(name).join(' · ')||'No eligible options'}</p></div><div><h4>Mean-coverage alternative</h4><p>{group.mean_objective.ids.map(name).join(' · ')||'No eligible options'}</p></div></div>
+    <details><summary>Inspect the tradeoff and source trail</summary><p>{group.strategy}</p><p>Least-served coverage change versus mean objective: {group.minimum_coverage_delta>=0?'+':''}{group.minimum_coverage_delta.toFixed(2)}. Mean coverage tradeoff: {group.mean_coverage_tradeoff.toFixed(2)}. {group.fair.subsets_examined} subsets inspected.</p><p>Without taste signals, using the same pool and constraints: {group.without_taste.ids.map(name).join(' · ')||'No eligible options'}.</p>{group.profiles.map(p=><p key={p.label}><b>{p.label}</b>: {p.seeds.map(s=>`${s.name} (${s.category})`).join(', ')} → {p.resolved_ids.join(', ')}</p>)}<p>{group.disclaimer}</p></details>
+  </section>;
+}

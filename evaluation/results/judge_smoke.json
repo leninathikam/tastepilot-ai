@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-10-30T15:29:42.908Z",
+  "base_url": "http://127.0.0.1:3000",
+  "public_verified": false,
+  "four_profile_workflow": true,
+  "qloo_calls": 9,
+  "candidates": 20,
+  "choices": 1,
+  "minimum_coverage_delta": 0,
+  "mean_coverage_tradeoff": 0,
+  "objectives_differ": false,
+  "member_coverage": {
+    "fair": {
+      "You": 0.4789473684210527,
+      "Alex": 0.3421052631578948,
+      "Sam": 0.65,
+      "Jordan": 0.5131578947368421
+    },
+    "mean": {
+      "You": 0.4789473684210527,
+      "Alex": 0.3421052631578948,
+      "Sam": 0.65,
+      "Jordan": 0.5131578947368421
+    }
+  },
+  "unknown_access_rejected": true,
+  "invalid_input_rejected": true,
+  "mobile_overflow": false,
+  "raw_response_saved": false
+}

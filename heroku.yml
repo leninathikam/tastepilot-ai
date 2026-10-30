@@ -1,0 +1,6 @@
+# Heroku builds this remotely; no local Docker engine is required.
+build:
+  docker:
+    web: Dockerfile
+run:
+  web: python scripts/serve.py

@@ -1,0 +1,12 @@
+{
+  "scope": "15 synthetic fixture scenarios; no live API or LLM baseline",
+  "scenarios": 15,
+  "budget_pass": 15,
+  "hard_constraints_pass": 15,
+  "stable_order": 15,
+  "mean_interest_coverage": 0.8,
+  "scenarios_with_changed_ranking": 12,
+  "qloo_calls": 0,
+  "llm_baseline": "NOT RUN",
+  "unsupported_claim_audit": "NOT RUN; labels checked only"
+}

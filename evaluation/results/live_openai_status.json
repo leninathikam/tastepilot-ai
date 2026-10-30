@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-10-30T15:04:20.990677+00:00",
+  "model": "gpt-4.1-mini",
+  "scope": "Live intent interpretation through Next proxy; not an LLM-only recommendation baseline",
+  "checks": [
+    {
+      "http_status": 200,
+      "expected_budget": 75,
+      "returned_budget": 75.0,
+      "other_fields_preserved": true,
+      "passed": true
+    },
+    {
+      "http_status": 200,
+      "expected_budget": 30,
+      "returned_budget": 30.0,
+      "other_fields_preserved": true,
+      "passed": true
+    }
+  ]
+}

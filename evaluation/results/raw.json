@@ -1,0 +1,3487 @@
+[
+  {
+    "scenario": "fixture-01",
+    "output": {
+      "type": "result",
+      "mode": "fixture",
+      "intent": {
+        "destination": "Chicago",
+        "date": "2026-10-31",
+        "party_size": 1,
+        "budget": 0.0,
+        "seeds": [
+          {
+            "name": "Japanese Breakfast",
+            "category": "artist"
+          }
+        ],
+        "interests": [
+          "Korean food"
+        ],
+        "dietary": "none",
+        "accessible": false,
+        "require_verified_hours": false,
+        "excluded_ids": [],
+        "max_stops": 3,
+        "taste_weight": 0.65,
+        "preference_weight": 0.35,
+        "companions": []
+      },
+      "status": "simulation",
+      "itinerary": [
+        {
+          "id": "fixture:4",
+          "name": "Pocket Park Sketch Walk",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "outdoors"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 5,
+          "taste_score": 0.19999999999999996,
+          "raw_query": {},
+          "cost": 0.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.12999999999999998,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #5. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "alternatives": [],
+      "rejected": [
+        {
+          "id": "fixture:0",
+          "name": "Paper Lantern Kitchen",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        },
+        {
+          "id": "fixture:1",
+          "name": "Side B Listening Room",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        },
+        {
+          "id": "fixture:2",
+          "name": "Open Frame Gallery",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        },
+        {
+          "id": "fixture:3",
+          "name": "City Lights Dining Hall",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        },
+        {
+          "id": "fixture:5",
+          "name": "Small Hours Records",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        }
+      ],
+      "unresolved": [],
+      "resolved_ids": [
+        "fixture:japanese breakfast"
+      ],
+      "group": null,
+      "decisions": [
+        {
+          "type": "decision",
+          "action": "expand_discovery",
+          "message": "Too few eligible or affordable stops; inspect one additional page without relaxing hard requirements.",
+          "source": "fixture"
+        },
+        {
+          "type": "decision",
+          "action": "expansion_complete",
+          "message": "Inspected 6 distinct candidates total. Hard requirements unchanged.",
+          "source": "fixture"
+        }
+      ],
+      "provenance": {
+        "source": "fixture",
+        "retrieved_at": "2026-10-29T15:34:16.661955+00:00",
+        "resolution_endpoint": "/search",
+        "discovery_endpoint": "/v2/insights",
+        "signal_entity_ids": [
+          "fixture:japanese breakfast"
+        ],
+        "destination_filter": "Chicago",
+        "practical_verification": "not performed",
+        "raw_affinity_used_for_ranking": false
+      },
+      "budget": {
+        "known_per_person": 0.0,
+        "known_group_total": 0.0,
+        "limit_per_person": 0.0,
+        "complete": true
+      },
+      "comparison": {
+        "label": "Same-candidate ranking ablation; not an LLM-only comparison",
+        "with_taste": [
+          "Pocket Park Sketch Walk"
+        ],
+        "without_taste": [
+          "Pocket Park Sketch Walk"
+        ],
+        "selected_without_taste": [
+          "Pocket Park Sketch Walk"
+        ],
+        "changed_positions": 0
+      },
+      "metrics": {
+        "latency_ms": 1.06,
+        "qloo_calls": 0,
+        "candidate_count": 6,
+        "selected_count": 1
+      },
+      "notice": "Fictional Chicago simulation. No live Qloo calls."
+    },
+    "metrics": {
+      "budget_satisfied": true,
+      "hard_constraints_satisfied": true,
+      "interest_coverage": 0.0,
+      "category_count": 1,
+      "repeat_order_stable": true,
+      "fixture_label_coverage": 1.0,
+      "unsupported_factual_claim_rate": null,
+      "estimated_operating_cost": null
+    }
+  },
+  {
+    "scenario": "fixture-02",
+    "output": {
+      "type": "result",
+      "mode": "fixture",
+      "intent": {
+        "destination": "Chicago",
+        "date": "2026-10-31",
+        "party_size": 2,
+        "budget": 20.0,
+        "seeds": [
+          {
+            "name": "Radiohead",
+            "category": "artist"
+          }
+        ],
+        "interests": [
+          "indie music"
+        ],
+        "dietary": "none",
+        "accessible": true,
+        "require_verified_hours": false,
+        "excluded_ids": [],
+        "max_stops": 3,
+        "taste_weight": 0.65,
+        "preference_weight": 0.35,
+        "companions": []
+      },
+      "status": "simulation",
+      "itinerary": [
+        {
+          "id": "fixture:5",
+          "name": "Small Hours Records",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 2,
+          "taste_score": 0.8,
+          "raw_query": {},
+          "cost": 8.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.87,
+          "preference_score": 1.0,
+          "explanation": "Synthetic fixture order: #2. Explicit tag matches: indie music. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:4",
+          "name": "Pocket Park Sketch Walk",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "outdoors"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 3,
+          "taste_score": 0.6,
+          "raw_query": {},
+          "cost": 0.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.39,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #3. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:2",
+          "name": "Open Frame Gallery",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "independent art"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 4,
+          "taste_score": 0.4,
+          "raw_query": {},
+          "cost": 12.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.26,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #4. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "alternatives": [],
+      "rejected": [
+        {
+          "id": "fixture:1",
+          "name": "Side B Listening Room",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        },
+        {
+          "id": "fixture:0",
+          "name": "Paper Lantern Kitchen",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        },
+        {
+          "id": "fixture:3",
+          "name": "City Lights Dining Hall",
+          "reasons": [
+            "Step-free access not confirmed",
+            "Exceeds per-person budget"
+          ]
+        }
+      ],
+      "unresolved": [],
+      "resolved_ids": [
+        "fixture:radiohead"
+      ],
+      "group": null,
+      "decisions": [],
+      "provenance": {
+        "source": "fixture",
+        "retrieved_at": "2026-10-29T15:34:16.664818+00:00",
+        "resolution_endpoint": "/search",
+        "discovery_endpoint": "/v2/insights",
+        "signal_entity_ids": [
+          "fixture:radiohead"
+        ],
+        "destination_filter": "Chicago",
+        "practical_verification": "not performed",
+        "raw_affinity_used_for_ranking": false
+      },
+      "budget": {
+        "known_per_person": 20.0,
+        "known_group_total": 40.0,
+        "limit_per_person": 20.0,
+        "complete": true
+      },
+      "comparison": {
+        "label": "Same-candidate ranking ablation; not an LLM-only comparison",
+        "with_taste": [
+          "Small Hours Records",
+          "Pocket Park Sketch Walk",
+          "Open Frame Gallery"
+        ],
+        "without_taste": [
+          "Small Hours Records",
+          "Open Frame Gallery",
+          "Pocket Park Sketch Walk"
+        ],
+        "selected_without_taste": [
+          "Small Hours Records",
+          "Open Frame Gallery",
+          "Pocket Park Sketch Walk"
+        ],
+        "changed_positions": 2
+      },
+      "metrics": {
+        "latency_ms": 1.22,
+        "qloo_calls": 0,
+        "candidate_count": 6,
+        "selected_count": 3
+      },
+      "notice": "Fictional Chicago simulation. No live Qloo calls."
+    },
+    "metrics": {
+      "budget_satisfied": true,
+      "hard_constraints_satisfied": true,
+      "interest_coverage": 1.0,
+      "category_count": 2,
+      "repeat_order_stable": true,
+      "fixture_label_coverage": 1.0,
+      "unsupported_factual_claim_rate": null,
+      "estimated_operating_cost": null
+    }
+  },
+  {
+    "scenario": "fixture-03",
+    "output": {
+      "type": "result",
+      "mode": "fixture",
+      "intent": {
+        "destination": "Chicago",
+        "date": "2026-10-31",
+        "party_size": 3,
+        "budget": 50.0,
+        "seeds": [
+          {
+            "name": "Khruangbin",
+            "category": "artist"
+          }
+        ],
+        "interests": [
+          "contemporary art"
+        ],
+        "dietary": "vegetarian",
+        "accessible": false,
+        "require_verified_hours": false,
+        "excluded_ids": [],
+        "max_stops": 3,
+        "taste_weight": 0.65,
+        "preference_weight": 0.35,
+        "companions": []
+      },
+      "status": "simulation",
+      "itinerary": [
+        {
+          "id": "fixture:5",
+          "name": "Small Hours Records",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 1,
+          "taste_score": 1.0,
+          "raw_query": {},
+          "cost": 8.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.65,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #1. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:4",
+          "name": "Pocket Park Sketch Walk",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "outdoors"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 4,
+          "taste_score": 0.4,
+          "raw_query": {},
+          "cost": 0.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.61,
+          "preference_score": 1.0,
+          "explanation": "Synthetic fixture order: #4. Explicit tag matches: contemporary art. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:0",
+          "name": "Paper Lantern Kitchen",
+          "category": "dining",
+          "tags": [
+            "Korean food",
+            "vegetarian"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 3,
+          "taste_score": 0.6,
+          "raw_query": {},
+          "cost": 32.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian"
+          ],
+          "available_date": null,
+          "score": 0.39,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #3. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "fixture:1",
+          "name": "Side B Listening Room",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 2,
+          "taste_score": 0.8,
+          "raw_query": {},
+          "cost": 28.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.52,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #2. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:2",
+          "name": "Open Frame Gallery",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "independent art"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 5,
+          "taste_score": 0.19999999999999996,
+          "raw_query": {},
+          "cost": 12.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.48,
+          "preference_score": 1.0,
+          "explanation": "Synthetic fixture order: #5. Explicit tag matches: contemporary art. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "rejected": [
+        {
+          "id": "fixture:3",
+          "name": "City Lights Dining Hall",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        }
+      ],
+      "unresolved": [],
+      "resolved_ids": [
+        "fixture:khruangbin"
+      ],
+      "group": null,
+      "decisions": [],
+      "provenance": {
+        "source": "fixture",
+        "retrieved_at": "2026-10-29T15:34:16.667722+00:00",
+        "resolution_endpoint": "/search",
+        "discovery_endpoint": "/v2/insights",
+        "signal_entity_ids": [
+          "fixture:khruangbin"
+        ],
+        "destination_filter": "Chicago",
+        "practical_verification": "not performed",
+        "raw_affinity_used_for_ranking": false
+      },
+      "budget": {
+        "known_per_person": 40.0,
+        "known_group_total": 120.0,
+        "limit_per_person": 50.0,
+        "complete": true
+      },
+      "comparison": {
+        "label": "Same-candidate ranking ablation; not an LLM-only comparison",
+        "with_taste": [
+          "Small Hours Records",
+          "Pocket Park Sketch Walk",
+          "Side B Listening Room",
+          "Open Frame Gallery",
+          "Paper Lantern Kitchen"
+        ],
+        "without_taste": [
+          "Open Frame Gallery",
+          "Pocket Park Sketch Walk",
+          "Paper Lantern Kitchen",
+          "Side B Listening Room",
+          "Small Hours Records"
+        ],
+        "selected_without_taste": [
+          "Open Frame Gallery",
+          "Paper Lantern Kitchen",
+          "Pocket Park Sketch Walk"
+        ],
+        "changed_positions": 4
+      },
+      "metrics": {
+        "latency_ms": 2.18,
+        "qloo_calls": 0,
+        "candidate_count": 6,
+        "selected_count": 3
+      },
+      "notice": "Fictional Chicago simulation. No live Qloo calls."
+    },
+    "metrics": {
+      "budget_satisfied": true,
+      "hard_constraints_satisfied": true,
+      "interest_coverage": 1.0,
+      "category_count": 3,
+      "repeat_order_stable": true,
+      "fixture_label_coverage": 1.0,
+      "unsupported_factual_claim_rate": null,
+      "estimated_operating_cost": null
+    }
+  },
+  {
+    "scenario": "fixture-04",
+    "output": {
+      "type": "result",
+      "mode": "fixture",
+      "intent": {
+        "destination": "Chicago",
+        "date": "2026-10-31",
+        "party_size": 4,
+        "budget": 100.0,
+        "seeds": [
+          {
+            "name": "Japanese Breakfast",
+            "category": "artist"
+          }
+        ],
+        "interests": [
+          "Korean food",
+          "indie music"
+        ],
+        "dietary": "none",
+        "accessible": false,
+        "require_verified_hours": false,
+        "excluded_ids": [],
+        "max_stops": 3,
+        "taste_weight": 0.65,
+        "preference_weight": 0.35,
+        "companions": []
+      },
+      "status": "simulation",
+      "itinerary": [
+        {
+          "id": "fixture:0",
+          "name": "Paper Lantern Kitchen",
+          "category": "dining",
+          "tags": [
+            "Korean food",
+            "vegetarian"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 1,
+          "taste_score": 1.0,
+          "raw_query": {},
+          "cost": 32.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian"
+          ],
+          "available_date": null,
+          "score": 0.825,
+          "preference_score": 0.5,
+          "explanation": "Synthetic fixture order: #1. Explicit tag matches: korean food. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:1",
+          "name": "Side B Listening Room",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 2,
+          "taste_score": 0.8,
+          "raw_query": {},
+          "cost": 28.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.6950000000000001,
+          "preference_score": 0.5,
+          "explanation": "Synthetic fixture order: #2. Explicit tag matches: indie music. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:2",
+          "name": "Open Frame Gallery",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "independent art"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 3,
+          "taste_score": 0.6,
+          "raw_query": {},
+          "cost": 12.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.39,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #3. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "fixture:3",
+          "name": "City Lights Dining Hall",
+          "category": "dining",
+          "tags": [
+            "Korean food",
+            "indie music",
+            "contemporary art"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 4,
+          "taste_score": 0.4,
+          "raw_query": {},
+          "cost": 65.0,
+          "accessible": false,
+          "dietary": [
+            "vegetarian"
+          ],
+          "available_date": null,
+          "score": 0.61,
+          "preference_score": 1.0,
+          "explanation": "Synthetic fixture order: #4. Explicit tag matches: korean food, indie music. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:5",
+          "name": "Small Hours Records",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 6,
+          "taste_score": 0.0,
+          "raw_query": {},
+          "cost": 8.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.175,
+          "preference_score": 0.5,
+          "explanation": "Synthetic fixture order: #6. Explicit tag matches: indie music. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:4",
+          "name": "Pocket Park Sketch Walk",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "outdoors"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 5,
+          "taste_score": 0.19999999999999996,
+          "raw_query": {},
+          "cost": 0.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.12999999999999998,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #5. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "rejected": [],
+      "unresolved": [],
+      "resolved_ids": [
+        "fixture:japanese breakfast"
+      ],
+      "group": null,
+      "decisions": [],
+      "provenance": {
+        "source": "fixture",
+        "retrieved_at": "2026-10-29T15:34:16.673179+00:00",
+        "resolution_endpoint": "/search",
+        "discovery_endpoint": "/v2/insights",
+        "signal_entity_ids": [
+          "fixture:japanese breakfast"
+        ],
+        "destination_filter": "Chicago",
+        "practical_verification": "not performed",
+        "raw_affinity_used_for_ranking": false
+      },
+      "budget": {
+        "known_per_person": 72.0,
+        "known_group_total": 288.0,
+        "limit_per_person": 100.0,
+        "complete": true
+      },
+      "comparison": {
+        "label": "Same-candidate ranking ablation; not an LLM-only comparison",
+        "with_taste": [
+          "Paper Lantern Kitchen",
+          "Side B Listening Room",
+          "City Lights Dining Hall",
+          "Open Frame Gallery",
+          "Small Hours Records",
+          "Pocket Park Sketch Walk"
+        ],
+        "without_taste": [
+          "City Lights Dining Hall",
+          "Paper Lantern Kitchen",
+          "Side B Listening Room",
+          "Small Hours Records",
+          "Open Frame Gallery",
+          "Pocket Park Sketch Walk"
+        ],
+        "selected_without_taste": [
+          "City Lights Dining Hall",
+          "Side B Listening Room",
+          "Pocket Park Sketch Walk"
+        ],
+        "changed_positions": 5
+      },
+      "metrics": {
+        "latency_ms": 2.41,
+        "qloo_calls": 0,
+        "candidate_count": 6,
+        "selected_count": 3
+      },
+      "notice": "Fictional Chicago simulation. No live Qloo calls."
+    },
+    "metrics": {
+      "budget_satisfied": true,
+      "hard_constraints_satisfied": true,
+      "interest_coverage": 1.0,
+      "category_count": 3,
+      "repeat_order_stable": true,
+      "fixture_label_coverage": 1.0,
+      "unsupported_factual_claim_rate": null,
+      "estimated_operating_cost": null
+    }
+  },
+  {
+    "scenario": "fixture-05",
+    "output": {
+      "type": "result",
+      "mode": "fixture",
+      "intent": {
+        "destination": "Chicago",
+        "date": "2026-10-31",
+        "party_size": 1,
+        "budget": 150.0,
+        "seeds": [
+          {
+            "name": "Radiohead",
+            "category": "artist"
+          }
+        ],
+        "interests": [
+          "Korean food",
+          "indie music",
+          "contemporary art"
+        ],
+        "dietary": "none",
+        "accessible": true,
+        "require_verified_hours": false,
+        "excluded_ids": [],
+        "max_stops": 3,
+        "taste_weight": 0.65,
+        "preference_weight": 0.35,
+        "companions": []
+      },
+      "status": "simulation",
+      "itinerary": [
+        {
+          "id": "fixture:1",
+          "name": "Side B Listening Room",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 1,
+          "taste_score": 1.0,
+          "raw_query": {},
+          "cost": 28.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.7666666666666667,
+          "preference_score": 0.3333333333333333,
+          "explanation": "Synthetic fixture order: #1. Explicit tag matches: indie music. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:4",
+          "name": "Pocket Park Sketch Walk",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "outdoors"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 3,
+          "taste_score": 0.6,
+          "raw_query": {},
+          "cost": 0.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.5066666666666667,
+          "preference_score": 0.3333333333333333,
+          "explanation": "Synthetic fixture order: #3. Explicit tag matches: contemporary art. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:0",
+          "name": "Paper Lantern Kitchen",
+          "category": "dining",
+          "tags": [
+            "Korean food",
+            "vegetarian"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 5,
+          "taste_score": 0.19999999999999996,
+          "raw_query": {},
+          "cost": 32.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian"
+          ],
+          "available_date": null,
+          "score": 0.24666666666666665,
+          "preference_score": 0.3333333333333333,
+          "explanation": "Synthetic fixture order: #5. Explicit tag matches: korean food. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "fixture:5",
+          "name": "Small Hours Records",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 2,
+          "taste_score": 0.8,
+          "raw_query": {},
+          "cost": 8.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.6366666666666667,
+          "preference_score": 0.3333333333333333,
+          "explanation": "Synthetic fixture order: #2. Explicit tag matches: indie music. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:2",
+          "name": "Open Frame Gallery",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "independent art"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 4,
+          "taste_score": 0.4,
+          "raw_query": {},
+          "cost": 12.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.37666666666666665,
+          "preference_score": 0.3333333333333333,
+          "explanation": "Synthetic fixture order: #4. Explicit tag matches: contemporary art. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "rejected": [
+        {
+          "id": "fixture:3",
+          "name": "City Lights Dining Hall",
+          "reasons": [
+            "Step-free access not confirmed"
+          ]
+        }
+      ],
+      "unresolved": [],
+      "resolved_ids": [
+        "fixture:radiohead"
+      ],
+      "group": null,
+      "decisions": [],
+      "provenance": {
+        "source": "fixture",
+        "retrieved_at": "2026-10-29T15:34:16.677265+00:00",
+        "resolution_endpoint": "/search",
+        "discovery_endpoint": "/v2/insights",
+        "signal_entity_ids": [
+          "fixture:radiohead"
+        ],
+        "destination_filter": "Chicago",
+        "practical_verification": "not performed",
+        "raw_affinity_used_for_ranking": false
+      },
+      "budget": {
+        "known_per_person": 60.0,
+        "known_group_total": 60.0,
+        "limit_per_person": 150.0,
+        "complete": true
+      },
+      "comparison": {
+        "label": "Same-candidate ranking ablation; not an LLM-only comparison",
+        "with_taste": [
+          "Side B Listening Room",
+          "Small Hours Records",
+          "Pocket Park Sketch Walk",
+          "Open Frame Gallery",
+          "Paper Lantern Kitchen"
+        ],
+        "without_taste": [
+          "Paper Lantern Kitchen",
+          "Side B Listening Room",
+          "Open Frame Gallery",
+          "Pocket Park Sketch Walk",
+          "Small Hours Records"
+        ],
+        "selected_without_taste": [
+          "Paper Lantern Kitchen",
+          "Side B Listening Room",
+          "Open Frame Gallery"
+        ],
+        "changed_positions": 5
+      },
+      "metrics": {
+        "latency_ms": 1.92,
+        "qloo_calls": 0,
+        "candidate_count": 6,
+        "selected_count": 3
+      },
+      "notice": "Fictional Chicago simulation. No live Qloo calls."
+    },
+    "metrics": {
+      "budget_satisfied": true,
+      "hard_constraints_satisfied": true,
+      "interest_coverage": 1.0,
+      "category_count": 3,
+      "repeat_order_stable": true,
+      "fixture_label_coverage": 1.0,
+      "unsupported_factual_claim_rate": null,
+      "estimated_operating_cost": null
+    }
+  },
+  {
+    "scenario": "fixture-06",
+    "output": {
+      "type": "result",
+      "mode": "fixture",
+      "intent": {
+        "destination": "Chicago",
+        "date": "2026-10-31",
+        "party_size": 2,
+        "budget": 0.0,
+        "seeds": [
+          {
+            "name": "Khruangbin",
+            "category": "artist"
+          }
+        ],
+        "interests": [
+          "Korean food"
+        ],
+        "dietary": "vegetarian",
+        "accessible": false,
+        "require_verified_hours": false,
+        "excluded_ids": [],
+        "max_stops": 3,
+        "taste_weight": 0.65,
+        "preference_weight": 0.35,
+        "companions": []
+      },
+      "status": "simulation",
+      "itinerary": [
+        {
+          "id": "fixture:4",
+          "name": "Pocket Park Sketch Walk",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "outdoors"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 4,
+          "taste_score": 0.4,
+          "raw_query": {},
+          "cost": 0.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.26,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #4. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "alternatives": [],
+      "rejected": [
+        {
+          "id": "fixture:5",
+          "name": "Small Hours Records",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        },
+        {
+          "id": "fixture:1",
+          "name": "Side B Listening Room",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        },
+        {
+          "id": "fixture:0",
+          "name": "Paper Lantern Kitchen",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        },
+        {
+          "id": "fixture:2",
+          "name": "Open Frame Gallery",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        },
+        {
+          "id": "fixture:3",
+          "name": "City Lights Dining Hall",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        }
+      ],
+      "unresolved": [],
+      "resolved_ids": [
+        "fixture:khruangbin"
+      ],
+      "group": null,
+      "decisions": [
+        {
+          "type": "decision",
+          "action": "expand_discovery",
+          "message": "Too few eligible or affordable stops; inspect one additional page without relaxing hard requirements.",
+          "source": "fixture"
+        },
+        {
+          "type": "decision",
+          "action": "expansion_complete",
+          "message": "Inspected 6 distinct candidates total. Hard requirements unchanged.",
+          "source": "fixture"
+        }
+      ],
+      "provenance": {
+        "source": "fixture",
+        "retrieved_at": "2026-10-29T15:34:16.679329+00:00",
+        "resolution_endpoint": "/search",
+        "discovery_endpoint": "/v2/insights",
+        "signal_entity_ids": [
+          "fixture:khruangbin"
+        ],
+        "destination_filter": "Chicago",
+        "practical_verification": "not performed",
+        "raw_affinity_used_for_ranking": false
+      },
+      "budget": {
+        "known_per_person": 0.0,
+        "known_group_total": 0.0,
+        "limit_per_person": 0.0,
+        "complete": true
+      },
+      "comparison": {
+        "label": "Same-candidate ranking ablation; not an LLM-only comparison",
+        "with_taste": [
+          "Pocket Park Sketch Walk"
+        ],
+        "without_taste": [
+          "Pocket Park Sketch Walk"
+        ],
+        "selected_without_taste": [
+          "Pocket Park Sketch Walk"
+        ],
+        "changed_positions": 0
+      },
+      "metrics": {
+        "latency_ms": 0.68,
+        "qloo_calls": 0,
+        "candidate_count": 6,
+        "selected_count": 1
+      },
+      "notice": "Fictional Chicago simulation. No live Qloo calls."
+    },
+    "metrics": {
+      "budget_satisfied": true,
+      "hard_constraints_satisfied": true,
+      "interest_coverage": 0.0,
+      "category_count": 1,
+      "repeat_order_stable": true,
+      "fixture_label_coverage": 1.0,
+      "unsupported_factual_claim_rate": null,
+      "estimated_operating_cost": null
+    }
+  },
+  {
+    "scenario": "fixture-07",
+    "output": {
+      "type": "result",
+      "mode": "fixture",
+      "intent": {
+        "destination": "Chicago",
+        "date": "2026-10-31",
+        "party_size": 3,
+        "budget": 20.0,
+        "seeds": [
+          {
+            "name": "Japanese Breakfast",
+            "category": "artist"
+          }
+        ],
+        "interests": [
+          "indie music"
+        ],
+        "dietary": "none",
+        "accessible": false,
+        "require_verified_hours": false,
+        "excluded_ids": [],
+        "max_stops": 3,
+        "taste_weight": 0.65,
+        "preference_weight": 0.35,
+        "companions": []
+      },
+      "status": "simulation",
+      "itinerary": [
+        {
+          "id": "fixture:2",
+          "name": "Open Frame Gallery",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "independent art"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 3,
+          "taste_score": 0.6,
+          "raw_query": {},
+          "cost": 12.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.39,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #3. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:5",
+          "name": "Small Hours Records",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 6,
+          "taste_score": 0.0,
+          "raw_query": {},
+          "cost": 8.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.35,
+          "preference_score": 1.0,
+          "explanation": "Synthetic fixture order: #6. Explicit tag matches: indie music. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:4",
+          "name": "Pocket Park Sketch Walk",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "outdoors"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 5,
+          "taste_score": 0.19999999999999996,
+          "raw_query": {},
+          "cost": 0.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.12999999999999998,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #5. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "alternatives": [],
+      "rejected": [
+        {
+          "id": "fixture:0",
+          "name": "Paper Lantern Kitchen",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        },
+        {
+          "id": "fixture:1",
+          "name": "Side B Listening Room",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        },
+        {
+          "id": "fixture:3",
+          "name": "City Lights Dining Hall",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        }
+      ],
+      "unresolved": [],
+      "resolved_ids": [
+        "fixture:japanese breakfast"
+      ],
+      "group": null,
+      "decisions": [],
+      "provenance": {
+        "source": "fixture",
+        "retrieved_at": "2026-10-29T15:34:16.681262+00:00",
+        "resolution_endpoint": "/search",
+        "discovery_endpoint": "/v2/insights",
+        "signal_entity_ids": [
+          "fixture:japanese breakfast"
+        ],
+        "destination_filter": "Chicago",
+        "practical_verification": "not performed",
+        "raw_affinity_used_for_ranking": false
+      },
+      "budget": {
+        "known_per_person": 20.0,
+        "known_group_total": 60.0,
+        "limit_per_person": 20.0,
+        "complete": true
+      },
+      "comparison": {
+        "label": "Same-candidate ranking ablation; not an LLM-only comparison",
+        "with_taste": [
+          "Open Frame Gallery",
+          "Small Hours Records",
+          "Pocket Park Sketch Walk"
+        ],
+        "without_taste": [
+          "Small Hours Records",
+          "Open Frame Gallery",
+          "Pocket Park Sketch Walk"
+        ],
+        "selected_without_taste": [
+          "Small Hours Records",
+          "Open Frame Gallery",
+          "Pocket Park Sketch Walk"
+        ],
+        "changed_positions": 2
+      },
+      "metrics": {
+        "latency_ms": 0.89,
+        "qloo_calls": 0,
+        "candidate_count": 6,
+        "selected_count": 3
+      },
+      "notice": "Fictional Chicago simulation. No live Qloo calls."
+    },
+    "metrics": {
+      "budget_satisfied": true,
+      "hard_constraints_satisfied": true,
+      "interest_coverage": 1.0,
+      "category_count": 2,
+      "repeat_order_stable": true,
+      "fixture_label_coverage": 1.0,
+      "unsupported_factual_claim_rate": null,
+      "estimated_operating_cost": null
+    }
+  },
+  {
+    "scenario": "fixture-08",
+    "output": {
+      "type": "result",
+      "mode": "fixture",
+      "intent": {
+        "destination": "Chicago",
+        "date": "2026-10-31",
+        "party_size": 4,
+        "budget": 50.0,
+        "seeds": [
+          {
+            "name": "Radiohead",
+            "category": "artist"
+          }
+        ],
+        "interests": [
+          "contemporary art"
+        ],
+        "dietary": "none",
+        "accessible": true,
+        "require_verified_hours": false,
+        "excluded_ids": [],
+        "max_stops": 3,
+        "taste_weight": 0.65,
+        "preference_weight": 0.35,
+        "companions": []
+      },
+      "status": "simulation",
+      "itinerary": [
+        {
+          "id": "fixture:4",
+          "name": "Pocket Park Sketch Walk",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "outdoors"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 3,
+          "taste_score": 0.6,
+          "raw_query": {},
+          "cost": 0.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.74,
+          "preference_score": 1.0,
+          "explanation": "Synthetic fixture order: #3. Explicit tag matches: contemporary art. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:1",
+          "name": "Side B Listening Room",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 1,
+          "taste_score": 1.0,
+          "raw_query": {},
+          "cost": 28.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.65,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #1. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:2",
+          "name": "Open Frame Gallery",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "independent art"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 4,
+          "taste_score": 0.4,
+          "raw_query": {},
+          "cost": 12.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.61,
+          "preference_score": 1.0,
+          "explanation": "Synthetic fixture order: #4. Explicit tag matches: contemporary art. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "fixture:5",
+          "name": "Small Hours Records",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 2,
+          "taste_score": 0.8,
+          "raw_query": {},
+          "cost": 8.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.52,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #2. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:0",
+          "name": "Paper Lantern Kitchen",
+          "category": "dining",
+          "tags": [
+            "Korean food",
+            "vegetarian"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 5,
+          "taste_score": 0.19999999999999996,
+          "raw_query": {},
+          "cost": 32.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian"
+          ],
+          "available_date": null,
+          "score": 0.12999999999999998,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #5. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "rejected": [
+        {
+          "id": "fixture:3",
+          "name": "City Lights Dining Hall",
+          "reasons": [
+            "Step-free access not confirmed",
+            "Exceeds per-person budget"
+          ]
+        }
+      ],
+      "unresolved": [],
+      "resolved_ids": [
+        "fixture:radiohead"
+      ],
+      "group": null,
+      "decisions": [],
+      "provenance": {
+        "source": "fixture",
+        "retrieved_at": "2026-10-29T15:34:16.683257+00:00",
+        "resolution_endpoint": "/search",
+        "discovery_endpoint": "/v2/insights",
+        "signal_entity_ids": [
+          "fixture:radiohead"
+        ],
+        "destination_filter": "Chicago",
+        "practical_verification": "not performed",
+        "raw_affinity_used_for_ranking": false
+      },
+      "budget": {
+        "known_per_person": 40.0,
+        "known_group_total": 160.0,
+        "limit_per_person": 50.0,
+        "complete": true
+      },
+      "comparison": {
+        "label": "Same-candidate ranking ablation; not an LLM-only comparison",
+        "with_taste": [
+          "Pocket Park Sketch Walk",
+          "Side B Listening Room",
+          "Open Frame Gallery",
+          "Small Hours Records",
+          "Paper Lantern Kitchen"
+        ],
+        "without_taste": [
+          "Open Frame Gallery",
+          "Pocket Park Sketch Walk",
+          "Paper Lantern Kitchen",
+          "Side B Listening Room",
+          "Small Hours Records"
+        ],
+        "selected_without_taste": [
+          "Open Frame Gallery",
+          "Paper Lantern Kitchen",
+          "Pocket Park Sketch Walk"
+        ],
+        "changed_positions": 5
+      },
+      "metrics": {
+        "latency_ms": 1.04,
+        "qloo_calls": 0,
+        "candidate_count": 6,
+        "selected_count": 3
+      },
+      "notice": "Fictional Chicago simulation. No live Qloo calls."
+    },
+    "metrics": {
+      "budget_satisfied": true,
+      "hard_constraints_satisfied": true,
+      "interest_coverage": 1.0,
+      "category_count": 2,
+      "repeat_order_stable": true,
+      "fixture_label_coverage": 1.0,
+      "unsupported_factual_claim_rate": null,
+      "estimated_operating_cost": null
+    }
+  },
+  {
+    "scenario": "fixture-09",
+    "output": {
+      "type": "result",
+      "mode": "fixture",
+      "intent": {
+        "destination": "Chicago",
+        "date": "2026-10-31",
+        "party_size": 1,
+        "budget": 100.0,
+        "seeds": [
+          {
+            "name": "Khruangbin",
+            "category": "artist"
+          }
+        ],
+        "interests": [
+          "Korean food",
+          "indie music"
+        ],
+        "dietary": "vegetarian",
+        "accessible": false,
+        "require_verified_hours": false,
+        "excluded_ids": [],
+        "max_stops": 3,
+        "taste_weight": 0.65,
+        "preference_weight": 0.35,
+        "companions": []
+      },
+      "status": "simulation",
+      "itinerary": [
+        {
+          "id": "fixture:5",
+          "name": "Small Hours Records",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 1,
+          "taste_score": 1.0,
+          "raw_query": {},
+          "cost": 8.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.825,
+          "preference_score": 0.5,
+          "explanation": "Synthetic fixture order: #1. Explicit tag matches: indie music. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:0",
+          "name": "Paper Lantern Kitchen",
+          "category": "dining",
+          "tags": [
+            "Korean food",
+            "vegetarian"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 3,
+          "taste_score": 0.6,
+          "raw_query": {},
+          "cost": 32.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian"
+          ],
+          "available_date": null,
+          "score": 0.565,
+          "preference_score": 0.5,
+          "explanation": "Synthetic fixture order: #3. Explicit tag matches: korean food. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:4",
+          "name": "Pocket Park Sketch Walk",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "outdoors"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 4,
+          "taste_score": 0.4,
+          "raw_query": {},
+          "cost": 0.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.26,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #4. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "fixture:1",
+          "name": "Side B Listening Room",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 2,
+          "taste_score": 0.8,
+          "raw_query": {},
+          "cost": 28.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.6950000000000001,
+          "preference_score": 0.5,
+          "explanation": "Synthetic fixture order: #2. Explicit tag matches: indie music. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:3",
+          "name": "City Lights Dining Hall",
+          "category": "dining",
+          "tags": [
+            "Korean food",
+            "indie music",
+            "contemporary art"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 6,
+          "taste_score": 0.0,
+          "raw_query": {},
+          "cost": 65.0,
+          "accessible": false,
+          "dietary": [
+            "vegetarian"
+          ],
+          "available_date": null,
+          "score": 0.35,
+          "preference_score": 1.0,
+          "explanation": "Synthetic fixture order: #6. Explicit tag matches: korean food, indie music. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:2",
+          "name": "Open Frame Gallery",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "independent art"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 5,
+          "taste_score": 0.19999999999999996,
+          "raw_query": {},
+          "cost": 12.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.12999999999999998,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #5. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "rejected": [],
+      "unresolved": [],
+      "resolved_ids": [
+        "fixture:khruangbin"
+      ],
+      "group": null,
+      "decisions": [],
+      "provenance": {
+        "source": "fixture",
+        "retrieved_at": "2026-10-29T15:34:16.686355+00:00",
+        "resolution_endpoint": "/search",
+        "discovery_endpoint": "/v2/insights",
+        "signal_entity_ids": [
+          "fixture:khruangbin"
+        ],
+        "destination_filter": "Chicago",
+        "practical_verification": "not performed",
+        "raw_affinity_used_for_ranking": false
+      },
+      "budget": {
+        "known_per_person": 40.0,
+        "known_group_total": 40.0,
+        "limit_per_person": 100.0,
+        "complete": true
+      },
+      "comparison": {
+        "label": "Same-candidate ranking ablation; not an LLM-only comparison",
+        "with_taste": [
+          "Small Hours Records",
+          "Side B Listening Room",
+          "Paper Lantern Kitchen",
+          "City Lights Dining Hall",
+          "Pocket Park Sketch Walk",
+          "Open Frame Gallery"
+        ],
+        "without_taste": [
+          "City Lights Dining Hall",
+          "Paper Lantern Kitchen",
+          "Side B Listening Room",
+          "Small Hours Records",
+          "Open Frame Gallery",
+          "Pocket Park Sketch Walk"
+        ],
+        "selected_without_taste": [
+          "City Lights Dining Hall",
+          "Side B Listening Room",
+          "Pocket Park Sketch Walk"
+        ],
+        "changed_positions": 6
+      },
+      "metrics": {
+        "latency_ms": 1.61,
+        "qloo_calls": 0,
+        "candidate_count": 6,
+        "selected_count": 3
+      },
+      "notice": "Fictional Chicago simulation. No live Qloo calls."
+    },
+    "metrics": {
+      "budget_satisfied": true,
+      "hard_constraints_satisfied": true,
+      "interest_coverage": 1.0,
+      "category_count": 3,
+      "repeat_order_stable": true,
+      "fixture_label_coverage": 1.0,
+      "unsupported_factual_claim_rate": null,
+      "estimated_operating_cost": null
+    }
+  },
+  {
+    "scenario": "fixture-10",
+    "output": {
+      "type": "result",
+      "mode": "fixture",
+      "intent": {
+        "destination": "Chicago",
+        "date": "2026-10-31",
+        "party_size": 2,
+        "budget": 150.0,
+        "seeds": [
+          {
+            "name": "Japanese Breakfast",
+            "category": "artist"
+          }
+        ],
+        "interests": [
+          "Korean food",
+          "indie music",
+          "contemporary art"
+        ],
+        "dietary": "none",
+        "accessible": false,
+        "require_verified_hours": false,
+        "excluded_ids": [],
+        "max_stops": 3,
+        "taste_weight": 0.65,
+        "preference_weight": 0.35,
+        "companions": []
+      },
+      "status": "simulation",
+      "itinerary": [
+        {
+          "id": "fixture:0",
+          "name": "Paper Lantern Kitchen",
+          "category": "dining",
+          "tags": [
+            "Korean food",
+            "vegetarian"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 1,
+          "taste_score": 1.0,
+          "raw_query": {},
+          "cost": 32.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian"
+          ],
+          "available_date": null,
+          "score": 0.7666666666666667,
+          "preference_score": 0.3333333333333333,
+          "explanation": "Synthetic fixture order: #1. Explicit tag matches: korean food. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:1",
+          "name": "Side B Listening Room",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 2,
+          "taste_score": 0.8,
+          "raw_query": {},
+          "cost": 28.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.6366666666666667,
+          "preference_score": 0.3333333333333333,
+          "explanation": "Synthetic fixture order: #2. Explicit tag matches: indie music. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:2",
+          "name": "Open Frame Gallery",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "independent art"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 3,
+          "taste_score": 0.6,
+          "raw_query": {},
+          "cost": 12.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.5066666666666667,
+          "preference_score": 0.3333333333333333,
+          "explanation": "Synthetic fixture order: #3. Explicit tag matches: contemporary art. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "fixture:3",
+          "name": "City Lights Dining Hall",
+          "category": "dining",
+          "tags": [
+            "Korean food",
+            "indie music",
+            "contemporary art"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 4,
+          "taste_score": 0.4,
+          "raw_query": {},
+          "cost": 65.0,
+          "accessible": false,
+          "dietary": [
+            "vegetarian"
+          ],
+          "available_date": null,
+          "score": 0.61,
+          "preference_score": 1.0,
+          "explanation": "Synthetic fixture order: #4. Explicit tag matches: korean food, indie music, contemporary art. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:4",
+          "name": "Pocket Park Sketch Walk",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "outdoors"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 5,
+          "taste_score": 0.19999999999999996,
+          "raw_query": {},
+          "cost": 0.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.24666666666666665,
+          "preference_score": 0.3333333333333333,
+          "explanation": "Synthetic fixture order: #5. Explicit tag matches: contemporary art. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:5",
+          "name": "Small Hours Records",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 6,
+          "taste_score": 0.0,
+          "raw_query": {},
+          "cost": 8.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.11666666666666665,
+          "preference_score": 0.3333333333333333,
+          "explanation": "Synthetic fixture order: #6. Explicit tag matches: indie music. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "rejected": [],
+      "unresolved": [],
+      "resolved_ids": [
+        "fixture:japanese breakfast"
+      ],
+      "group": null,
+      "decisions": [],
+      "provenance": {
+        "source": "fixture",
+        "retrieved_at": "2026-10-29T15:34:16.689241+00:00",
+        "resolution_endpoint": "/search",
+        "discovery_endpoint": "/v2/insights",
+        "signal_entity_ids": [
+          "fixture:japanese breakfast"
+        ],
+        "destination_filter": "Chicago",
+        "practical_verification": "not performed",
+        "raw_affinity_used_for_ranking": false
+      },
+      "budget": {
+        "known_per_person": 72.0,
+        "known_group_total": 144.0,
+        "limit_per_person": 150.0,
+        "complete": true
+      },
+      "comparison": {
+        "label": "Same-candidate ranking ablation; not an LLM-only comparison",
+        "with_taste": [
+          "Paper Lantern Kitchen",
+          "Side B Listening Room",
+          "City Lights Dining Hall",
+          "Open Frame Gallery",
+          "Pocket Park Sketch Walk",
+          "Small Hours Records"
+        ],
+        "without_taste": [
+          "City Lights Dining Hall",
+          "Paper Lantern Kitchen",
+          "Side B Listening Room",
+          "Open Frame Gallery",
+          "Pocket Park Sketch Walk",
+          "Small Hours Records"
+        ],
+        "selected_without_taste": [
+          "City Lights Dining Hall",
+          "Side B Listening Room",
+          "Open Frame Gallery"
+        ],
+        "changed_positions": 3
+      },
+      "metrics": {
+        "latency_ms": 1.3,
+        "qloo_calls": 0,
+        "candidate_count": 6,
+        "selected_count": 3
+      },
+      "notice": "Fictional Chicago simulation. No live Qloo calls."
+    },
+    "metrics": {
+      "budget_satisfied": true,
+      "hard_constraints_satisfied": true,
+      "interest_coverage": 1.0,
+      "category_count": 3,
+      "repeat_order_stable": true,
+      "fixture_label_coverage": 1.0,
+      "unsupported_factual_claim_rate": null,
+      "estimated_operating_cost": null
+    }
+  },
+  {
+    "scenario": "fixture-11",
+    "output": {
+      "type": "result",
+      "mode": "fixture",
+      "intent": {
+        "destination": "Chicago",
+        "date": "2026-10-31",
+        "party_size": 3,
+        "budget": 0.0,
+        "seeds": [
+          {
+            "name": "Radiohead",
+            "category": "artist"
+          }
+        ],
+        "interests": [
+          "Korean food"
+        ],
+        "dietary": "none",
+        "accessible": true,
+        "require_verified_hours": false,
+        "excluded_ids": [],
+        "max_stops": 3,
+        "taste_weight": 0.65,
+        "preference_weight": 0.35,
+        "companions": []
+      },
+      "status": "simulation",
+      "itinerary": [
+        {
+          "id": "fixture:4",
+          "name": "Pocket Park Sketch Walk",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "outdoors"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 3,
+          "taste_score": 0.6,
+          "raw_query": {},
+          "cost": 0.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.39,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #3. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "alternatives": [],
+      "rejected": [
+        {
+          "id": "fixture:1",
+          "name": "Side B Listening Room",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        },
+        {
+          "id": "fixture:5",
+          "name": "Small Hours Records",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        },
+        {
+          "id": "fixture:2",
+          "name": "Open Frame Gallery",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        },
+        {
+          "id": "fixture:0",
+          "name": "Paper Lantern Kitchen",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        },
+        {
+          "id": "fixture:3",
+          "name": "City Lights Dining Hall",
+          "reasons": [
+            "Step-free access not confirmed",
+            "Exceeds per-person budget"
+          ]
+        }
+      ],
+      "unresolved": [],
+      "resolved_ids": [
+        "fixture:radiohead"
+      ],
+      "group": null,
+      "decisions": [
+        {
+          "type": "decision",
+          "action": "expand_discovery",
+          "message": "Too few eligible or affordable stops; inspect one additional page without relaxing hard requirements.",
+          "source": "fixture"
+        },
+        {
+          "type": "decision",
+          "action": "expansion_complete",
+          "message": "Inspected 6 distinct candidates total. Hard requirements unchanged.",
+          "source": "fixture"
+        }
+      ],
+      "provenance": {
+        "source": "fixture",
+        "retrieved_at": "2026-10-29T15:34:16.691660+00:00",
+        "resolution_endpoint": "/search",
+        "discovery_endpoint": "/v2/insights",
+        "signal_entity_ids": [
+          "fixture:radiohead"
+        ],
+        "destination_filter": "Chicago",
+        "practical_verification": "not performed",
+        "raw_affinity_used_for_ranking": false
+      },
+      "budget": {
+        "known_per_person": 0.0,
+        "known_group_total": 0.0,
+        "limit_per_person": 0.0,
+        "complete": true
+      },
+      "comparison": {
+        "label": "Same-candidate ranking ablation; not an LLM-only comparison",
+        "with_taste": [
+          "Pocket Park Sketch Walk"
+        ],
+        "without_taste": [
+          "Pocket Park Sketch Walk"
+        ],
+        "selected_without_taste": [
+          "Pocket Park Sketch Walk"
+        ],
+        "changed_positions": 0
+      },
+      "metrics": {
+        "latency_ms": 0.71,
+        "qloo_calls": 0,
+        "candidate_count": 6,
+        "selected_count": 1
+      },
+      "notice": "Fictional Chicago simulation. No live Qloo calls."
+    },
+    "metrics": {
+      "budget_satisfied": true,
+      "hard_constraints_satisfied": true,
+      "interest_coverage": 0.0,
+      "category_count": 1,
+      "repeat_order_stable": true,
+      "fixture_label_coverage": 1.0,
+      "unsupported_factual_claim_rate": null,
+      "estimated_operating_cost": null
+    }
+  },
+  {
+    "scenario": "fixture-12",
+    "output": {
+      "type": "result",
+      "mode": "fixture",
+      "intent": {
+        "destination": "Chicago",
+        "date": "2026-10-31",
+        "party_size": 4,
+        "budget": 20.0,
+        "seeds": [
+          {
+            "name": "Khruangbin",
+            "category": "artist"
+          }
+        ],
+        "interests": [
+          "indie music"
+        ],
+        "dietary": "vegetarian",
+        "accessible": false,
+        "require_verified_hours": false,
+        "excluded_ids": [],
+        "max_stops": 3,
+        "taste_weight": 0.65,
+        "preference_weight": 0.35,
+        "companions": []
+      },
+      "status": "simulation",
+      "itinerary": [
+        {
+          "id": "fixture:5",
+          "name": "Small Hours Records",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 1,
+          "taste_score": 1.0,
+          "raw_query": {},
+          "cost": 8.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 1.0,
+          "preference_score": 1.0,
+          "explanation": "Synthetic fixture order: #1. Explicit tag matches: indie music. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:4",
+          "name": "Pocket Park Sketch Walk",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "outdoors"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 4,
+          "taste_score": 0.4,
+          "raw_query": {},
+          "cost": 0.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.26,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #4. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:2",
+          "name": "Open Frame Gallery",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "independent art"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 5,
+          "taste_score": 0.19999999999999996,
+          "raw_query": {},
+          "cost": 12.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.12999999999999998,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #5. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "alternatives": [],
+      "rejected": [
+        {
+          "id": "fixture:1",
+          "name": "Side B Listening Room",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        },
+        {
+          "id": "fixture:0",
+          "name": "Paper Lantern Kitchen",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        },
+        {
+          "id": "fixture:3",
+          "name": "City Lights Dining Hall",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        }
+      ],
+      "unresolved": [],
+      "resolved_ids": [
+        "fixture:khruangbin"
+      ],
+      "group": null,
+      "decisions": [],
+      "provenance": {
+        "source": "fixture",
+        "retrieved_at": "2026-10-29T15:34:16.693234+00:00",
+        "resolution_endpoint": "/search",
+        "discovery_endpoint": "/v2/insights",
+        "signal_entity_ids": [
+          "fixture:khruangbin"
+        ],
+        "destination_filter": "Chicago",
+        "practical_verification": "not performed",
+        "raw_affinity_used_for_ranking": false
+      },
+      "budget": {
+        "known_per_person": 20.0,
+        "known_group_total": 80.0,
+        "limit_per_person": 20.0,
+        "complete": true
+      },
+      "comparison": {
+        "label": "Same-candidate ranking ablation; not an LLM-only comparison",
+        "with_taste": [
+          "Small Hours Records",
+          "Pocket Park Sketch Walk",
+          "Open Frame Gallery"
+        ],
+        "without_taste": [
+          "Small Hours Records",
+          "Open Frame Gallery",
+          "Pocket Park Sketch Walk"
+        ],
+        "selected_without_taste": [
+          "Small Hours Records",
+          "Open Frame Gallery",
+          "Pocket Park Sketch Walk"
+        ],
+        "changed_positions": 2
+      },
+      "metrics": {
+        "latency_ms": 0.69,
+        "qloo_calls": 0,
+        "candidate_count": 6,
+        "selected_count": 3
+      },
+      "notice": "Fictional Chicago simulation. No live Qloo calls."
+    },
+    "metrics": {
+      "budget_satisfied": true,
+      "hard_constraints_satisfied": true,
+      "interest_coverage": 1.0,
+      "category_count": 2,
+      "repeat_order_stable": true,
+      "fixture_label_coverage": 1.0,
+      "unsupported_factual_claim_rate": null,
+      "estimated_operating_cost": null
+    }
+  },
+  {
+    "scenario": "fixture-13",
+    "output": {
+      "type": "result",
+      "mode": "fixture",
+      "intent": {
+        "destination": "Chicago",
+        "date": "2026-10-31",
+        "party_size": 1,
+        "budget": 50.0,
+        "seeds": [
+          {
+            "name": "Japanese Breakfast",
+            "category": "artist"
+          }
+        ],
+        "interests": [
+          "contemporary art"
+        ],
+        "dietary": "none",
+        "accessible": false,
+        "require_verified_hours": false,
+        "excluded_ids": [],
+        "max_stops": 3,
+        "taste_weight": 0.65,
+        "preference_weight": 0.35,
+        "companions": []
+      },
+      "status": "simulation",
+      "itinerary": [
+        {
+          "id": "fixture:2",
+          "name": "Open Frame Gallery",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "independent art"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 3,
+          "taste_score": 0.6,
+          "raw_query": {},
+          "cost": 12.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.74,
+          "preference_score": 1.0,
+          "explanation": "Synthetic fixture order: #3. Explicit tag matches: contemporary art. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:0",
+          "name": "Paper Lantern Kitchen",
+          "category": "dining",
+          "tags": [
+            "Korean food",
+            "vegetarian"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 1,
+          "taste_score": 1.0,
+          "raw_query": {},
+          "cost": 32.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian"
+          ],
+          "available_date": null,
+          "score": 0.65,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #1. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:4",
+          "name": "Pocket Park Sketch Walk",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "outdoors"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 5,
+          "taste_score": 0.19999999999999996,
+          "raw_query": {},
+          "cost": 0.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.48,
+          "preference_score": 1.0,
+          "explanation": "Synthetic fixture order: #5. Explicit tag matches: contemporary art. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "fixture:1",
+          "name": "Side B Listening Room",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 2,
+          "taste_score": 0.8,
+          "raw_query": {},
+          "cost": 28.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.52,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #2. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:5",
+          "name": "Small Hours Records",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 6,
+          "taste_score": 0.0,
+          "raw_query": {},
+          "cost": 8.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.0,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #6. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "rejected": [
+        {
+          "id": "fixture:3",
+          "name": "City Lights Dining Hall",
+          "reasons": [
+            "Exceeds per-person budget"
+          ]
+        }
+      ],
+      "unresolved": [],
+      "resolved_ids": [
+        "fixture:japanese breakfast"
+      ],
+      "group": null,
+      "decisions": [],
+      "provenance": {
+        "source": "fixture",
+        "retrieved_at": "2026-10-29T15:34:16.694915+00:00",
+        "resolution_endpoint": "/search",
+        "discovery_endpoint": "/v2/insights",
+        "signal_entity_ids": [
+          "fixture:japanese breakfast"
+        ],
+        "destination_filter": "Chicago",
+        "practical_verification": "not performed",
+        "raw_affinity_used_for_ranking": false
+      },
+      "budget": {
+        "known_per_person": 44.0,
+        "known_group_total": 44.0,
+        "limit_per_person": 50.0,
+        "complete": true
+      },
+      "comparison": {
+        "label": "Same-candidate ranking ablation; not an LLM-only comparison",
+        "with_taste": [
+          "Open Frame Gallery",
+          "Paper Lantern Kitchen",
+          "Side B Listening Room",
+          "Pocket Park Sketch Walk",
+          "Small Hours Records"
+        ],
+        "without_taste": [
+          "Open Frame Gallery",
+          "Pocket Park Sketch Walk",
+          "Paper Lantern Kitchen",
+          "Side B Listening Room",
+          "Small Hours Records"
+        ],
+        "selected_without_taste": [
+          "Open Frame Gallery",
+          "Paper Lantern Kitchen",
+          "Pocket Park Sketch Walk"
+        ],
+        "changed_positions": 3
+      },
+      "metrics": {
+        "latency_ms": 0.79,
+        "qloo_calls": 0,
+        "candidate_count": 6,
+        "selected_count": 3
+      },
+      "notice": "Fictional Chicago simulation. No live Qloo calls."
+    },
+    "metrics": {
+      "budget_satisfied": true,
+      "hard_constraints_satisfied": true,
+      "interest_coverage": 1.0,
+      "category_count": 2,
+      "repeat_order_stable": true,
+      "fixture_label_coverage": 1.0,
+      "unsupported_factual_claim_rate": null,
+      "estimated_operating_cost": null
+    }
+  },
+  {
+    "scenario": "fixture-14",
+    "output": {
+      "type": "result",
+      "mode": "fixture",
+      "intent": {
+        "destination": "Chicago",
+        "date": "2026-10-31",
+        "party_size": 2,
+        "budget": 100.0,
+        "seeds": [
+          {
+            "name": "Radiohead",
+            "category": "artist"
+          }
+        ],
+        "interests": [
+          "Korean food",
+          "indie music"
+        ],
+        "dietary": "none",
+        "accessible": true,
+        "require_verified_hours": false,
+        "excluded_ids": [],
+        "max_stops": 3,
+        "taste_weight": 0.65,
+        "preference_weight": 0.35,
+        "companions": []
+      },
+      "status": "simulation",
+      "itinerary": [
+        {
+          "id": "fixture:1",
+          "name": "Side B Listening Room",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 1,
+          "taste_score": 1.0,
+          "raw_query": {},
+          "cost": 28.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.825,
+          "preference_score": 0.5,
+          "explanation": "Synthetic fixture order: #1. Explicit tag matches: indie music. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:4",
+          "name": "Pocket Park Sketch Walk",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "outdoors"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 3,
+          "taste_score": 0.6,
+          "raw_query": {},
+          "cost": 0.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.39,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #3. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:0",
+          "name": "Paper Lantern Kitchen",
+          "category": "dining",
+          "tags": [
+            "Korean food",
+            "vegetarian"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 5,
+          "taste_score": 0.19999999999999996,
+          "raw_query": {},
+          "cost": 32.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian"
+          ],
+          "available_date": null,
+          "score": 0.30499999999999994,
+          "preference_score": 0.5,
+          "explanation": "Synthetic fixture order: #5. Explicit tag matches: korean food. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "fixture:5",
+          "name": "Small Hours Records",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 2,
+          "taste_score": 0.8,
+          "raw_query": {},
+          "cost": 8.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.6950000000000001,
+          "preference_score": 0.5,
+          "explanation": "Synthetic fixture order: #2. Explicit tag matches: indie music. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:2",
+          "name": "Open Frame Gallery",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "independent art"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 4,
+          "taste_score": 0.4,
+          "raw_query": {},
+          "cost": 12.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.26,
+          "preference_score": 0.0,
+          "explanation": "Synthetic fixture order: #4. Explicit tag matches: none. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "rejected": [
+        {
+          "id": "fixture:3",
+          "name": "City Lights Dining Hall",
+          "reasons": [
+            "Step-free access not confirmed"
+          ]
+        }
+      ],
+      "unresolved": [],
+      "resolved_ids": [
+        "fixture:radiohead"
+      ],
+      "group": null,
+      "decisions": [],
+      "provenance": {
+        "source": "fixture",
+        "retrieved_at": "2026-10-29T15:34:16.697290+00:00",
+        "resolution_endpoint": "/search",
+        "discovery_endpoint": "/v2/insights",
+        "signal_entity_ids": [
+          "fixture:radiohead"
+        ],
+        "destination_filter": "Chicago",
+        "practical_verification": "not performed",
+        "raw_affinity_used_for_ranking": false
+      },
+      "budget": {
+        "known_per_person": 60.0,
+        "known_group_total": 120.0,
+        "limit_per_person": 100.0,
+        "complete": true
+      },
+      "comparison": {
+        "label": "Same-candidate ranking ablation; not an LLM-only comparison",
+        "with_taste": [
+          "Side B Listening Room",
+          "Small Hours Records",
+          "Pocket Park Sketch Walk",
+          "Paper Lantern Kitchen",
+          "Open Frame Gallery"
+        ],
+        "without_taste": [
+          "Paper Lantern Kitchen",
+          "Side B Listening Room",
+          "Small Hours Records",
+          "Open Frame Gallery",
+          "Pocket Park Sketch Walk"
+        ],
+        "selected_without_taste": [
+          "Paper Lantern Kitchen",
+          "Side B Listening Room",
+          "Open Frame Gallery"
+        ],
+        "changed_positions": 5
+      },
+      "metrics": {
+        "latency_ms": 1.07,
+        "qloo_calls": 0,
+        "candidate_count": 6,
+        "selected_count": 3
+      },
+      "notice": "Fictional Chicago simulation. No live Qloo calls."
+    },
+    "metrics": {
+      "budget_satisfied": true,
+      "hard_constraints_satisfied": true,
+      "interest_coverage": 1.0,
+      "category_count": 3,
+      "repeat_order_stable": true,
+      "fixture_label_coverage": 1.0,
+      "unsupported_factual_claim_rate": null,
+      "estimated_operating_cost": null
+    }
+  },
+  {
+    "scenario": "fixture-15",
+    "output": {
+      "type": "result",
+      "mode": "fixture",
+      "intent": {
+        "destination": "Chicago",
+        "date": "2026-10-31",
+        "party_size": 3,
+        "budget": 150.0,
+        "seeds": [
+          {
+            "name": "Khruangbin",
+            "category": "artist"
+          }
+        ],
+        "interests": [
+          "Korean food",
+          "indie music",
+          "contemporary art"
+        ],
+        "dietary": "vegetarian",
+        "accessible": false,
+        "require_verified_hours": false,
+        "excluded_ids": [],
+        "max_stops": 3,
+        "taste_weight": 0.65,
+        "preference_weight": 0.35,
+        "companions": []
+      },
+      "status": "simulation",
+      "itinerary": [
+        {
+          "id": "fixture:5",
+          "name": "Small Hours Records",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 1,
+          "taste_score": 1.0,
+          "raw_query": {},
+          "cost": 8.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.7666666666666667,
+          "preference_score": 0.3333333333333333,
+          "explanation": "Synthetic fixture order: #1. Explicit tag matches: indie music. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:0",
+          "name": "Paper Lantern Kitchen",
+          "category": "dining",
+          "tags": [
+            "Korean food",
+            "vegetarian"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 3,
+          "taste_score": 0.6,
+          "raw_query": {},
+          "cost": 32.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian"
+          ],
+          "available_date": null,
+          "score": 0.5066666666666667,
+          "preference_score": 0.3333333333333333,
+          "explanation": "Synthetic fixture order: #3. Explicit tag matches: korean food. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:4",
+          "name": "Pocket Park Sketch Walk",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "outdoors"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 4,
+          "taste_score": 0.4,
+          "raw_query": {},
+          "cost": 0.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.37666666666666665,
+          "preference_score": 0.3333333333333333,
+          "explanation": "Synthetic fixture order: #4. Explicit tag matches: contemporary art. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "alternatives": [
+        {
+          "id": "fixture:1",
+          "name": "Side B Listening Room",
+          "category": "music",
+          "tags": [
+            "indie music",
+            "vinyl"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 2,
+          "taste_score": 0.8,
+          "raw_query": {},
+          "cost": 28.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.6366666666666667,
+          "preference_score": 0.3333333333333333,
+          "explanation": "Synthetic fixture order: #2. Explicit tag matches: indie music. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:3",
+          "name": "City Lights Dining Hall",
+          "category": "dining",
+          "tags": [
+            "Korean food",
+            "indie music",
+            "contemporary art"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 6,
+          "taste_score": 0.0,
+          "raw_query": {},
+          "cost": 65.0,
+          "accessible": false,
+          "dietary": [
+            "vegetarian"
+          ],
+          "available_date": null,
+          "score": 0.35,
+          "preference_score": 1.0,
+          "explanation": "Synthetic fixture order: #6. Explicit tag matches: korean food, indie music, contemporary art. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        },
+        {
+          "id": "fixture:2",
+          "name": "Open Frame Gallery",
+          "category": "art",
+          "tags": [
+            "contemporary art",
+            "independent art"
+          ],
+          "source": "fixture",
+          "source_url": null,
+          "address": null,
+          "taste_rank": 5,
+          "taste_score": 0.19999999999999996,
+          "raw_query": {},
+          "cost": 12.0,
+          "accessible": true,
+          "dietary": [
+            "vegetarian",
+            "vegan"
+          ],
+          "available_date": null,
+          "score": 0.24666666666666665,
+          "preference_score": 0.3333333333333333,
+          "explanation": "Synthetic fixture order: #5. Explicit tag matches: contemporary art. Cultural affinity is not a guarantee of enjoyment.",
+          "warnings": [
+            "Fictional example venue; all costs and signals are synthetic"
+          ],
+          "member_evidence": []
+        }
+      ],
+      "rejected": [],
+      "unresolved": [],
+      "resolved_ids": [
+        "fixture:khruangbin"
+      ],
+      "group": null,
+      "decisions": [],
+      "provenance": {
+        "source": "fixture",
+        "retrieved_at": "2026-10-29T15:34:16.699719+00:00",
+        "resolution_endpoint": "/search",
+        "discovery_endpoint": "/v2/insights",
+        "signal_entity_ids": [
+          "fixture:khruangbin"
+        ],
+        "destination_filter": "Chicago",
+        "practical_verification": "not performed",
+        "raw_affinity_used_for_ranking": false
+      },
+      "budget": {
+        "known_per_person": 40.0,
+        "known_group_total": 120.0,
+        "limit_per_person": 150.0,
+        "complete": true
+      },
+      "comparison": {
+        "label": "Same-candidate ranking ablation; not an LLM-only comparison",
+        "with_taste": [
+          "Small Hours Records",
+          "Side B Listening Room",
+          "Paper Lantern Kitchen",
+          "Pocket Park Sketch Walk",
+          "City Lights Dining Hall",
+          "Open Frame Gallery"
+        ],
+        "without_taste": [
+          "City Lights Dining Hall",
+          "Paper Lantern Kitchen",
+          "Side B Listening Room",
+          "Open Frame Gallery",
+          "Pocket Park Sketch Walk",
+          "Small Hours Records"
+        ],
+        "selected_without_taste": [
+          "City Lights Dining Hall",
+          "Side B Listening Room",
+          "Open Frame Gallery"
+        ],
+        "changed_positions": 6
+      },
+      "metrics": {
+        "latency_ms": 1.15,
+        "qloo_calls": 0,
+        "candidate_count": 6,
+        "selected_count": 3
+      },
+      "notice": "Fictional Chicago simulation. No live Qloo calls."
+    },
+    "metrics": {
+      "budget_satisfied": true,
+      "hard_constraints_satisfied": true,
+      "interest_coverage": 1.0,
+      "category_count": 3,
+      "repeat_order_stable": true,
+      "fixture_label_coverage": 1.0,
+      "unsupported_factual_claim_rate": null,
+      "estimated_operating_cost": null
+    }
+  }
+]

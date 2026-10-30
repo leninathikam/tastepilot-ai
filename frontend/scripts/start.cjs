@@ -1,0 +1,11 @@
+const fs=require('node:fs');
+const path=require('node:path');
+const {spawn}=require('node:child_process');
+const root=path.resolve(__dirname,'..');
+const target=path.join(root,'.next','standalone');
+if(!fs.existsSync(path.join(target,'server.js')))throw Error('Run npm run build first');
+fs.cpSync(path.join(root,'public'),path.join(target,'public'),{recursive:true});
+fs.cpSync(path.join(root,'.next','static'),path.join(target,'.next','static'),{recursive:true});
+const child=spawn(process.execPath,[path.join(target,'server.js')],{cwd:root,stdio:'inherit',env:{...process.env,HOSTNAME:process.env.HOSTNAME||'127.0.0.1'}});
+for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>child.kill(signal));
+child.on('exit',code=>process.exit(code??1));

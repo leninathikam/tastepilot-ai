@@ -1,0 +1,12 @@
+.env
+.env.*
+.git
+.research
+frontend/node_modules
+frontend/.next
+frontend/test-results
+frontend/playwright-report
+frontend/*.tsbuildinfo
+evaluation
+**/__pycache__
+**/.pytest_cache

@@ -1,0 +1,580 @@
+[
+  {
+    "id": "one-stop",
+    "intent": {
+      "date": "2026-10-31",
+      "destination": "Chicago",
+      "party_size": 3,
+      "budget": 150,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food"
+      ],
+      "companions": [
+        {
+          "label": "Music friend",
+          "seeds": [
+            {
+              "name": "Radiohead",
+              "category": "artist"
+            }
+          ]
+        },
+        {
+          "label": "Film friend",
+          "seeds": [
+            {
+              "name": "Past Lives",
+              "category": "movie"
+            }
+          ]
+        }
+      ],
+      "max_stops": 1
+    },
+    "expected_error": false
+  },
+  {
+    "id": "two-stops",
+    "intent": {
+      "date": "2026-10-31",
+      "destination": "Chicago",
+      "party_size": 3,
+      "budget": 150,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food"
+      ],
+      "companions": [
+        {
+          "label": "Music friend",
+          "seeds": [
+            {
+              "name": "Radiohead",
+              "category": "artist"
+            }
+          ]
+        },
+        {
+          "label": "Film friend",
+          "seeds": [
+            {
+              "name": "Past Lives",
+              "category": "movie"
+            }
+          ]
+        }
+      ],
+      "max_stops": 2
+    },
+    "expected_error": false
+  },
+  {
+    "id": "three-stops",
+    "intent": {
+      "date": "2026-10-31",
+      "destination": "Chicago",
+      "party_size": 3,
+      "budget": 150,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food"
+      ],
+      "companions": [
+        {
+          "label": "Music friend",
+          "seeds": [
+            {
+              "name": "Radiohead",
+              "category": "artist"
+            }
+          ]
+        },
+        {
+          "label": "Film friend",
+          "seeds": [
+            {
+              "name": "Past Lives",
+              "category": "movie"
+            }
+          ]
+        }
+      ]
+    },
+    "expected_error": false
+  },
+  {
+    "id": "zero-budget",
+    "intent": {
+      "date": "2026-10-31",
+      "destination": "Chicago",
+      "party_size": 3,
+      "budget": 0,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food"
+      ],
+      "companions": [
+        {
+          "label": "Music friend",
+          "seeds": [
+            {
+              "name": "Radiohead",
+              "category": "artist"
+            }
+          ]
+        },
+        {
+          "label": "Film friend",
+          "seeds": [
+            {
+              "name": "Past Lives",
+              "category": "movie"
+            }
+          ]
+        }
+      ]
+    },
+    "expected_error": false
+  },
+  {
+    "id": "small-budget",
+    "intent": {
+      "date": "2026-10-31",
+      "destination": "Chicago",
+      "party_size": 3,
+      "budget": 8,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food"
+      ],
+      "companions": [
+        {
+          "label": "Music friend",
+          "seeds": [
+            {
+              "name": "Radiohead",
+              "category": "artist"
+            }
+          ]
+        },
+        {
+          "label": "Film friend",
+          "seeds": [
+            {
+              "name": "Past Lives",
+              "category": "movie"
+            }
+          ]
+        }
+      ]
+    },
+    "expected_error": false
+  },
+  {
+    "id": "budget-20",
+    "intent": {
+      "date": "2026-10-31",
+      "destination": "Chicago",
+      "party_size": 3,
+      "budget": 20,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food"
+      ],
+      "companions": [
+        {
+          "label": "Music friend",
+          "seeds": [
+            {
+              "name": "Radiohead",
+              "category": "artist"
+            }
+          ]
+        },
+        {
+          "label": "Film friend",
+          "seeds": [
+            {
+              "name": "Past Lives",
+              "category": "movie"
+            }
+          ]
+        }
+      ]
+    },
+    "expected_error": false
+  },
+  {
+    "id": "budget-40",
+    "intent": {
+      "date": "2026-10-31",
+      "destination": "Chicago",
+      "party_size": 3,
+      "budget": 40,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food"
+      ],
+      "companions": [
+        {
+          "label": "Music friend",
+          "seeds": [
+            {
+              "name": "Radiohead",
+              "category": "artist"
+            }
+          ]
+        },
+        {
+          "label": "Film friend",
+          "seeds": [
+            {
+              "name": "Past Lives",
+              "category": "movie"
+            }
+          ]
+        }
+      ]
+    },
+    "expected_error": false
+  },
+  {
+    "id": "access",
+    "intent": {
+      "date": "2026-10-31",
+      "destination": "Chicago",
+      "party_size": 3,
+      "budget": 150,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food"
+      ],
+      "companions": [
+        {
+          "label": "Music friend",
+          "seeds": [
+            {
+              "name": "Radiohead",
+              "category": "artist"
+            }
+          ]
+        },
+        {
+          "label": "Film friend",
+          "seeds": [
+            {
+              "name": "Past Lives",
+              "category": "movie"
+            }
+          ]
+        }
+      ],
+      "accessible": true
+    },
+    "expected_error": false
+  },
+  {
+    "id": "vegetarian",
+    "intent": {
+      "date": "2026-10-31",
+      "destination": "Chicago",
+      "party_size": 3,
+      "budget": 150,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food"
+      ],
+      "companions": [
+        {
+          "label": "Music friend",
+          "seeds": [
+            {
+              "name": "Radiohead",
+              "category": "artist"
+            }
+          ]
+        },
+        {
+          "label": "Film friend",
+          "seeds": [
+            {
+              "name": "Past Lives",
+              "category": "movie"
+            }
+          ]
+        }
+      ],
+      "dietary": "vegetarian"
+    },
+    "expected_error": false
+  },
+  {
+    "id": "vegan",
+    "intent": {
+      "date": "2026-10-31",
+      "destination": "Chicago",
+      "party_size": 3,
+      "budget": 150,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food"
+      ],
+      "companions": [
+        {
+          "label": "Music friend",
+          "seeds": [
+            {
+              "name": "Radiohead",
+              "category": "artist"
+            }
+          ]
+        },
+        {
+          "label": "Film friend",
+          "seeds": [
+            {
+              "name": "Past Lives",
+              "category": "movie"
+            }
+          ]
+        }
+      ],
+      "dietary": "vegan"
+    },
+    "expected_error": false
+  },
+  {
+    "id": "unknown-hours",
+    "intent": {
+      "date": "2026-10-31",
+      "destination": "Chicago",
+      "party_size": 3,
+      "budget": 150,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food"
+      ],
+      "companions": [
+        {
+          "label": "Music friend",
+          "seeds": [
+            {
+              "name": "Radiohead",
+              "category": "artist"
+            }
+          ]
+        },
+        {
+          "label": "Film friend",
+          "seeds": [
+            {
+              "name": "Past Lives",
+              "category": "movie"
+            }
+          ]
+        }
+      ],
+      "require_verified_hours": true
+    },
+    "expected_error": false
+  },
+  {
+    "id": "replacement",
+    "intent": {
+      "date": "2026-10-31",
+      "destination": "Chicago",
+      "party_size": 3,
+      "budget": 150,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food"
+      ],
+      "companions": [
+        {
+          "label": "Music friend",
+          "seeds": [
+            {
+              "name": "Radiohead",
+              "category": "artist"
+            }
+          ]
+        },
+        {
+          "label": "Film friend",
+          "seeds": [
+            {
+              "name": "Past Lives",
+              "category": "movie"
+            }
+          ]
+        }
+      ],
+      "excluded_ids": [
+        "fixture:0",
+        "fixture:1"
+      ]
+    },
+    "expected_error": false
+  },
+  {
+    "id": "outside-fixture-city",
+    "intent": {
+      "date": "2026-10-31",
+      "destination": "Paris",
+      "party_size": 3,
+      "budget": 150,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food"
+      ],
+      "companions": [
+        {
+          "label": "Music friend",
+          "seeds": [
+            {
+              "name": "Radiohead",
+              "category": "artist"
+            }
+          ]
+        },
+        {
+          "label": "Film friend",
+          "seeds": [
+            {
+              "name": "Past Lives",
+              "category": "movie"
+            }
+          ]
+        }
+      ]
+    },
+    "expected_error": false
+  },
+  {
+    "id": "guest-cap",
+    "intent": {
+      "date": "2026-10-31",
+      "destination": "Chicago",
+      "party_size": 3,
+      "budget": 150,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food"
+      ],
+      "companions": [
+        {
+          "label": "Guest",
+          "seeds": [
+            {
+              "name": "Dune",
+              "category": "book"
+            }
+          ],
+          "budget": 12
+        }
+      ]
+    },
+    "expected_error": false
+  },
+  {
+    "id": "unresolved-member",
+    "intent": {
+      "date": "2026-10-31",
+      "destination": "Chicago",
+      "party_size": 3,
+      "budget": 150,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food"
+      ],
+      "companions": [
+        {
+          "label": "Guest",
+          "seeds": [
+            {
+              "name": "Imaginary artist",
+              "category": "artist"
+            }
+          ]
+        }
+      ]
+    },
+    "expected_error": true
+  }
+]

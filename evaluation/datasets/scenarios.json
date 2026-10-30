@@ -1,0 +1,401 @@
+[
+  {
+    "id": "fixture-01",
+    "intent": {
+      "destination": "Chicago",
+      "date": "2026-10-31",
+      "party_size": 1,
+      "budget": 0.0,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food"
+      ],
+      "dietary": "none",
+      "accessible": false,
+      "require_verified_hours": false,
+      "excluded_ids": [],
+      "max_stops": 3,
+      "taste_weight": 0.65,
+      "preference_weight": 0.35,
+      "companions": []
+    }
+  },
+  {
+    "id": "fixture-02",
+    "intent": {
+      "destination": "Chicago",
+      "date": "2026-10-31",
+      "party_size": 2,
+      "budget": 20.0,
+      "seeds": [
+        {
+          "name": "Radiohead",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "indie music"
+      ],
+      "dietary": "none",
+      "accessible": true,
+      "require_verified_hours": false,
+      "excluded_ids": [],
+      "max_stops": 3,
+      "taste_weight": 0.65,
+      "preference_weight": 0.35,
+      "companions": []
+    }
+  },
+  {
+    "id": "fixture-03",
+    "intent": {
+      "destination": "Chicago",
+      "date": "2026-10-31",
+      "party_size": 3,
+      "budget": 50.0,
+      "seeds": [
+        {
+          "name": "Khruangbin",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "contemporary art"
+      ],
+      "dietary": "vegetarian",
+      "accessible": false,
+      "require_verified_hours": false,
+      "excluded_ids": [],
+      "max_stops": 3,
+      "taste_weight": 0.65,
+      "preference_weight": 0.35,
+      "companions": []
+    }
+  },
+  {
+    "id": "fixture-04",
+    "intent": {
+      "destination": "Chicago",
+      "date": "2026-10-31",
+      "party_size": 4,
+      "budget": 100.0,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food",
+        "indie music"
+      ],
+      "dietary": "none",
+      "accessible": false,
+      "require_verified_hours": false,
+      "excluded_ids": [],
+      "max_stops": 3,
+      "taste_weight": 0.65,
+      "preference_weight": 0.35,
+      "companions": []
+    }
+  },
+  {
+    "id": "fixture-05",
+    "intent": {
+      "destination": "Chicago",
+      "date": "2026-10-31",
+      "party_size": 1,
+      "budget": 150.0,
+      "seeds": [
+        {
+          "name": "Radiohead",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food",
+        "indie music",
+        "contemporary art"
+      ],
+      "dietary": "none",
+      "accessible": true,
+      "require_verified_hours": false,
+      "excluded_ids": [],
+      "max_stops": 3,
+      "taste_weight": 0.65,
+      "preference_weight": 0.35,
+      "companions": []
+    }
+  },
+  {
+    "id": "fixture-06",
+    "intent": {
+      "destination": "Chicago",
+      "date": "2026-10-31",
+      "party_size": 2,
+      "budget": 0.0,
+      "seeds": [
+        {
+          "name": "Khruangbin",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food"
+      ],
+      "dietary": "vegetarian",
+      "accessible": false,
+      "require_verified_hours": false,
+      "excluded_ids": [],
+      "max_stops": 3,
+      "taste_weight": 0.65,
+      "preference_weight": 0.35,
+      "companions": []
+    }
+  },
+  {
+    "id": "fixture-07",
+    "intent": {
+      "destination": "Chicago",
+      "date": "2026-10-31",
+      "party_size": 3,
+      "budget": 20.0,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "indie music"
+      ],
+      "dietary": "none",
+      "accessible": false,
+      "require_verified_hours": false,
+      "excluded_ids": [],
+      "max_stops": 3,
+      "taste_weight": 0.65,
+      "preference_weight": 0.35,
+      "companions": []
+    }
+  },
+  {
+    "id": "fixture-08",
+    "intent": {
+      "destination": "Chicago",
+      "date": "2026-10-31",
+      "party_size": 4,
+      "budget": 50.0,
+      "seeds": [
+        {
+          "name": "Radiohead",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "contemporary art"
+      ],
+      "dietary": "none",
+      "accessible": true,
+      "require_verified_hours": false,
+      "excluded_ids": [],
+      "max_stops": 3,
+      "taste_weight": 0.65,
+      "preference_weight": 0.35,
+      "companions": []
+    }
+  },
+  {
+    "id": "fixture-09",
+    "intent": {
+      "destination": "Chicago",
+      "date": "2026-10-31",
+      "party_size": 1,
+      "budget": 100.0,
+      "seeds": [
+        {
+          "name": "Khruangbin",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food",
+        "indie music"
+      ],
+      "dietary": "vegetarian",
+      "accessible": false,
+      "require_verified_hours": false,
+      "excluded_ids": [],
+      "max_stops": 3,
+      "taste_weight": 0.65,
+      "preference_weight": 0.35,
+      "companions": []
+    }
+  },
+  {
+    "id": "fixture-10",
+    "intent": {
+      "destination": "Chicago",
+      "date": "2026-10-31",
+      "party_size": 2,
+      "budget": 150.0,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food",
+        "indie music",
+        "contemporary art"
+      ],
+      "dietary": "none",
+      "accessible": false,
+      "require_verified_hours": false,
+      "excluded_ids": [],
+      "max_stops": 3,
+      "taste_weight": 0.65,
+      "preference_weight": 0.35,
+      "companions": []
+    }
+  },
+  {
+    "id": "fixture-11",
+    "intent": {
+      "destination": "Chicago",
+      "date": "2026-10-31",
+      "party_size": 3,
+      "budget": 0.0,
+      "seeds": [
+        {
+          "name": "Radiohead",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food"
+      ],
+      "dietary": "none",
+      "accessible": true,
+      "require_verified_hours": false,
+      "excluded_ids": [],
+      "max_stops": 3,
+      "taste_weight": 0.65,
+      "preference_weight": 0.35,
+      "companions": []
+    }
+  },
+  {
+    "id": "fixture-12",
+    "intent": {
+      "destination": "Chicago",
+      "date": "2026-10-31",
+      "party_size": 4,
+      "budget": 20.0,
+      "seeds": [
+        {
+          "name": "Khruangbin",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "indie music"
+      ],
+      "dietary": "vegetarian",
+      "accessible": false,
+      "require_verified_hours": false,
+      "excluded_ids": [],
+      "max_stops": 3,
+      "taste_weight": 0.65,
+      "preference_weight": 0.35,
+      "companions": []
+    }
+  },
+  {
+    "id": "fixture-13",
+    "intent": {
+      "destination": "Chicago",
+      "date": "2026-10-31",
+      "party_size": 1,
+      "budget": 50.0,
+      "seeds": [
+        {
+          "name": "Japanese Breakfast",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "contemporary art"
+      ],
+      "dietary": "none",
+      "accessible": false,
+      "require_verified_hours": false,
+      "excluded_ids": [],
+      "max_stops": 3,
+      "taste_weight": 0.65,
+      "preference_weight": 0.35,
+      "companions": []
+    }
+  },
+  {
+    "id": "fixture-14",
+    "intent": {
+      "destination": "Chicago",
+      "date": "2026-10-31",
+      "party_size": 2,
+      "budget": 100.0,
+      "seeds": [
+        {
+          "name": "Radiohead",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food",
+        "indie music"
+      ],
+      "dietary": "none",
+      "accessible": true,
+      "require_verified_hours": false,
+      "excluded_ids": [],
+      "max_stops": 3,
+      "taste_weight": 0.65,
+      "preference_weight": 0.35,
+      "companions": []
+    }
+  },
+  {
+    "id": "fixture-15",
+    "intent": {
+      "destination": "Chicago",
+      "date": "2026-10-31",
+      "party_size": 3,
+      "budget": 150.0,
+      "seeds": [
+        {
+          "name": "Khruangbin",
+          "category": "artist"
+        }
+      ],
+      "interests": [
+        "Korean food",
+        "indie music",
+        "contemporary art"
+      ],
+      "dietary": "vegetarian",
+      "accessible": false,
+      "require_verified_hours": false,
+      "excluded_ids": [],
+      "max_stops": 3,
+      "taste_weight": 0.65,
+      "preference_weight": 0.35,
+      "companions": []
+    }
+  }
+]

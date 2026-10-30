@@ -1,0 +1,6 @@
+{
+  "name": "tastepilot-ai", "version": "0.1.0", "private": true,
+  "scripts": {"dev":"next dev --hostname 127.0.0.1", "build":"next build", "start":"node scripts/start.cjs", "test":"vitest run", "test:e2e":"playwright test", "typecheck":"tsc --noEmit"},
+  "dependencies": {"next":"16.4.3", "react":"19.2.0", "react-dom":"19.2.0", "lucide-react":"^0.468.0"},
+  "devDependencies": {"typescript":"^5.9.0", "@types/node":"^22.0.0", "@types/react":"^19.0.0", "@types/react-dom":"^19.0.0", "@playwright/test":"^1.56.0", "vitest":"^3.2.0", "@testing-library/react":"^16.0.0", "jsdom":"^26.0.0"}
+}

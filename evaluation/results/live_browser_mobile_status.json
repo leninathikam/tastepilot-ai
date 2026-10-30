@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-30T14:56:48.717Z",
+  "passed": true,
+  "mode": "live",
+  "qloo_calls": 6,
+  "candidates": 20,
+  "group_profiles": 2,
+  "provisional_group_choices": 3,
+  "confirmed_stops": 0,
+  "budget_complete": false,
+  "source": "qloo",
+  "raw_responses_saved": false,
+  "viewport": "mobile"
+}
