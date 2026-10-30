@@ -75,7 +75,7 @@ def _enrich_candidate(entity, index, total, target_date=None) -> Candidate:
     website = next((u for u in websites if isinstance(u, str) and urlparse(u).scheme in ('http', 'https')), None)
 
     raw_tags = entity.get('tags') or []
-    tag_names = [t['name'] for t in raw_tags if isinstance(t, dict) and isinstance(t.get('name'), str)]
+    tag_names = list(dict.fromkeys(t['name'] for t in raw_tags if isinstance(t, dict) and isinstance(t.get('name'), str)))
     tag_names_lower = {t.casefold() for t in tag_names}
 
     # Step-free accessibility from tags and descriptions
@@ -107,10 +107,22 @@ def _enrich_candidate(entity, index, total, target_date=None) -> Candidate:
             if isinstance(first_period, dict) and not first_period.get('closed', False):
                 available_date = target_date
 
-    # Cost: strictly never invent prices. Only verify if explicit free admission.
+    # Cost: strictly never invent prices. Only verify if explicit free admission or public municipal amenities.
     cost = None
     cost_desc = (props.get('cost_description') or '').casefold()
-    if 'free' in cost_desc or 'free admission' in tag_names_lower or 'free' in tag_names_lower:
+    is_free = (
+        'free' in cost_desc
+        or any(
+            phrase in t
+            for t in tag_names_lower
+            for phrase in (
+                'free admission', 'has free admission', 'free entry', 'free of charge',
+                'no admission fee', 'no cover', 'free to the public', 'admission is free', 'free public'
+            )
+        )
+        or any(t in ('public park', 'public parks', 'public plaza', 'pedestrian path', 'public space', 'public beach', 'public promenade') for t in tag_names_lower)
+    )
+    if is_free:
         cost = 0.0
 
     price_level = props.get('price_level') if isinstance(props.get('price_level'), int) else None

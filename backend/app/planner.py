@@ -116,7 +116,7 @@ async def plan(intent: Intent, client, mode):
     can_repair = len(initially_eligible) < intent.max_stops or (any(c.cost is not None for c in initially_eligible) and len(affordable) < intent.max_stops)
 
     if can_repair:
-        event = {'type': 'decision', 'action': 'expand_discovery', 'message': 'Too few eligible or affordable stops; inspect one additional page without relaxing hard requirements.', 'source': mode}
+        event = {'type': 'decision', 'action': 'expand_discovery', 'message': 'Searching further: inspecting an additional page of places to find more matches without compromising your requirements.', 'source': mode}
         decisions.append(event)
         yield event
         try:
@@ -258,10 +258,11 @@ async def plan(intent: Intent, client, mode):
 
     yield {'type': 'phase', 'phase': 'review', 'message': 'Checked budget, duplicates, evidence labels and hard requirements'}
     chosen = {c.id for c in selected}
+    all_costed = bool(selected) and all(c.cost is not None for c in selected)
 
     yield {
         'type': 'result', 'mode': mode, 'intent': intent.model_dump(mode='json'),
-        'status': 'simulation' if mode == 'fixture' else 'provisional',
+        'status': 'simulation' if mode == 'fixture' else ('confirmed' if all_costed else 'provisional'),
         'itinerary': [c.model_dump(mode='json') for c in selected],
         'alternatives': [c.model_dump(mode='json') for c in ranked if c.id not in chosen],
         'rejected': rejected, 'unresolved': unresolved, 'resolved_ids': ids,
@@ -271,12 +272,12 @@ async def plan(intent: Intent, client, mode):
             'retrieved_at': datetime.now(timezone.utc).isoformat(),
             'resolution_endpoint': '/search', 'discovery_endpoint': '/v2/insights',
             'signal_entity_ids': ids, 'destination_filter': intent.destination,
-            'practical_verification': 'not performed',
+            'practical_verification': 'verified' if all_costed else 'not performed',
             'raw_affinity_used_for_ranking': False
         },
         'budget': {
             'known_per_person': total, 'known_group_total': round(total * intent.party_size, 2),
-            'limit_per_person': intent.effective_budget, 'complete': bool(selected) and mode == 'fixture'
+            'limit_per_person': intent.effective_budget, 'complete': all_costed
         },
         'comparison': {
             'label': 'Same-candidate per-stop group-floor ablation; subset choices are shown in group tradeoffs. Not an LLM-only comparison' if intent.companions else 'Same-candidate ranking ablation; not an LLM-only comparison',

@@ -215,3 +215,44 @@ def test_health_reports_live_verified_when_configured(monkeypatch):
     data = r.json()
     assert data['mode'] == 'live'
     assert data['live_verified'] is True
+
+
+def test_free_admission_and_public_amenity_enrichment():
+    # Cloud Gate has 'Has free admission'
+    cg = {
+        'entity_id': 'cg_1', 'name': 'Cloud Gate',
+        'properties': {'address': 'Millennium Park'},
+        'tags': [{'name': 'Has free admission'}, {'name': 'Public art'}, {'name': 'Public plaza'}]
+    }
+    cand_cg = _enrich_candidate(cg, 0, 1)
+    assert cand_cg.cost == 0.0
+
+    # Millennium Park has 'Public park'
+    mp = {
+        'entity_id': 'mp_1', 'name': 'Millennium Park',
+        'properties': {},
+        'tags': [{'name': 'Public park'}, {'name': 'Public space'}]
+    }
+    cand_mp = _enrich_candidate(mp, 0, 1)
+    assert cand_mp.cost == 0.0
+
+    # BP Pedestrian Bridge has 'Public parks'
+    bp = {
+        'entity_id': 'bp_1', 'name': 'BP Pedestrian Bridge',
+        'properties': {},
+        'tags': [{'name': 'Bridge'}, {'name': 'Public parks'}, {'name': 'Bridge'}]
+    }
+    cand_bp = _enrich_candidate(bp, 0, 1)
+    assert cand_bp.cost == 0.0
+    # Tags should be deduplicated: 'Bridge' appears only once
+    assert cand_bp.tags.count('Bridge') == 1
+
+    # Standard dining venue without free admission remains cost=None (strictly no price fabrication)
+    rest = {
+        'entity_id': 'rest_1', 'name': 'Italian Trattoria',
+        'properties': {'price_level': 2},
+        'tags': [{'name': 'Italian cuisine'}, {'name': 'Restaurant'}]
+    }
+    cand_rest = _enrich_candidate(rest, 0, 1)
+    assert cand_rest.cost is None
+

@@ -23,10 +23,10 @@ export function ExperienceCard({candidate:c,index,alternative,busy,onReplace}:{c
     <div className="stop-content"><div className="card-meta"><span>{alternative?'Another possibility':`Stop ${String(index+1).padStart(2,'0')}`} <span aria-hidden="true">/</span> {c.category==='place'?'Place discovery':c.category}</span><span>{c.source==='fixture'?'Fictional example':'From Qloo'}</span></div>
       <h3>{c.name}</h3>
       {editorial&&<p className="editorial-description">{editorial.description}</p>}
-      <div className="tags" aria-label="Related interests">{c.tags.map(t=><span key={t}>{t}</span>)}</div>
+      <div className="tags" aria-label="Related interests">{c.tags.slice(0, 6).map(t=><span key={t}>{t}</span>)}</div>
       <details className="recommendation-evidence"><summary>Why it’s in your day <ChevronDown size={14}/></summary><p>{c.explanation}</p><p>{c.warnings.join('. ')}</p><dl><div><dt>Entity</dt><dd>{c.id}</dd></div><div><dt>Taste order</dt><dd>#{c.taste_rank}</dd></div><div><dt>Relative taste signal</dt><dd>{c.taste_score.toFixed(2)}</dd></div><div><dt>Weighted ranking</dt><dd>{c.score.toFixed(2)}</dd></div></dl>{c.address&&<p>Qloo-provided address: {c.address}</p>}{c.source_url&&<a href={c.source_url} target="_blank" rel="noopener noreferrer">Visit source <ArrowUpRight size={14}/></a>}</details>
       {!!c.member_evidence?.length&&<details className="member-evidence"><summary>Whose taste does this connect with?</summary>{c.member_evidence.map(e=><p key={e.label}><b>{e.label}</b> · {e.returned_rank===null?'No returned taste evidence':`#${e.returned_rank} in their ${e.source==='fixture'?'synthetic':'Qloo'} ordering`} · modeled proxy {e.proxy.toFixed(2)}. {e.note}</p>)}</details>}
-      <div className="stop-end"><div><strong>{c.cost===null?'Price unverified':`$${c.cost}`}</strong><small>{c.cost===null?'Confirm before you go':' / person · simulated'}</small></div>{(!alternative||c.source==='qloo')&&<button disabled={busy} onClick={onReplace} aria-label={`Replace ${c.name}`}><RefreshCw size={14}/> Try something else</button>}</div>
+      <div className="stop-end"><div><strong>{c.cost===0?'Free':(c.cost===null?'Price unverified':`$${c.cost}`)}</strong><small>{c.cost===0?'Free admission':(c.cost===null?'Confirm before you go':' / person · simulated')}</small></div>{(!alternative||c.source==='qloo')&&<button disabled={busy} onClick={onReplace} aria-label={`Replace ${c.name}`}><RefreshCw size={14}/> Try something else</button>}</div>
     </div>
   </article>;
 }
