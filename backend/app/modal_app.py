@@ -2,11 +2,15 @@
 Reuses existing negotiation math and provides candidate-level fairness and counterfactuals.
 """
 from typing import Any
-import modal
 
-app = modal.App("tastepilot-group-intelligence")
-
-image = modal.Image.debian_slim(python_version="3.12").pip_install("pydantic>=2.0.0", "fastapi[standard]")
+try:
+    import modal
+    app = modal.App("tastepilot-group-intelligence")
+    image = modal.Image.debian_slim(python_version="3.12").pip_install("pydantic>=2.0.0", "fastapi[standard]")
+except ImportError:
+    modal = None
+    app = None
+    image = None
 
 
 def compute_candidate_fairness(candidates: list[dict], labels: list[str]) -> list[dict]:
@@ -181,14 +185,15 @@ def solve_group_optimization(payload: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-@app.function(image=image, timeout=30)
-def optimize(payload: dict[str, Any]) -> dict[str, Any]:
-    """Modal function for group optimization."""
-    return solve_group_optimization(payload)
+if app is not None and modal is not None:
+    @app.function(image=image, timeout=30)
+    def optimize(payload: dict[str, Any]) -> dict[str, Any]:
+        """Modal function for group optimization."""
+        return solve_group_optimization(payload)
 
 
-@app.function(image=image, timeout=30)
-@modal.fastapi_endpoint(method="POST")
-def web_optimize(payload: dict[str, Any]) -> dict[str, Any]:
-    """Modal HTTP web endpoint callable directly from FastAPI backend."""
-    return solve_group_optimization(payload)
+    @app.function(image=image, timeout=30)
+    @modal.fastapi_endpoint(method="POST")
+    def web_optimize(payload: dict[str, Any]) -> dict[str, Any]:
+        """Modal HTTP web endpoint callable directly from FastAPI backend."""
+        return solve_group_optimization(payload)
