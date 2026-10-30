@@ -30,8 +30,11 @@ flowchart TD
   Constraints -->|Insufficient options| Expand["Conditional Page-2 Discovery Expansion"]
   Expand --> Constraints
   Constraints --> Rescore["Same-Pool Multi-Profile Scoring<br/>(filter.results.entities)"]
-  Rescore --> Negotiate["Max-Min Group Compromise<br/>& Mean-Objective Comparison"]
-  Negotiate --> Critic["Runtime Critic<br/>(Invariant validation & source verification)"]
+  Rescore --> Router{"Modal Serverless<br/>Available?"}
+  Router -->|Primary: 6s HTTPS timeout| Modal["Modal Serverless Cloud Engine<br/>(Fairness matrix & Counterfactuals)"]
+  Router -->|Failover / Disabled| LocalOpt["Local Resilient Engine<br/>(In-process negotiation.py)"]
+  Modal --> Critic["Runtime Critic<br/>(Invariant validation & source verification)"]
+  LocalOpt --> Critic
   Critic --> Stream["NDJSON Real-Time Event Stream<br/>(Phases, decisions, candidates, compromise)"]
   Stream --> UI
 ```
@@ -43,7 +46,7 @@ flowchart TD
 3. **Hard Constraint Filtering**: Strictly excludes any candidate violating explicit dietary, accessibility, or budget limits.
 4. **Conditional Expansion**: Triggers at most one additional insights page if eligible candidates are scarce.
 5. **Multi-Profile Same-Pool Scoring**: Queries Qloo with `filter.results.entities` for each companion against the identical candidate set to obtain personalized ranking signals without cross-query bias.
-6. **Max-Min Group Compromise**: Evaluates candidate subsets to maximize the lowest-scoring member's best-stop coverage, comparing against a standard mean-preference objective and a no-taste ablation.
+6. **Modal Serverless Fairness & Counterfactuals**: Executes combinatorial max-min fairness ranking, builds candidate satisfaction vectors, and generates leave-one-member-out counterfactual explanations (e.g., showing how removing a person changes the recommendation).
 7. **Runtime Critic & Streaming**: Enforces budget bounds, deduplication, and source provenance, then streams live progress and decisions back to the browser.
 
 ---
@@ -139,6 +142,8 @@ Required Heroku Config Vars:
 - `DATA_MODE`: `live`
 - `QLOO_API_KEY`: Server-side Qloo API token
 - `QLOO_API_URL`: `https://hackathon.api.qloo.com`
+- `MODAL_API_URL`: `https://leningoudzzz--tastepilot-group-intelligence-web-optimize.us-east.modal.run`
+- `MODAL_ENABLED`: `true`
 - `OPENAI_API_KEY`: *(Optional)* OpenAI key for natural language interpretation
 
 ---

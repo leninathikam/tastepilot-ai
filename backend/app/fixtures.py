@@ -18,7 +18,7 @@ class FixtureClient:
         known = {'artist': {'japanese breakfast', 'radiohead', 'khruangbin'}, 'movie': {'past lives'}, 'book': {'dune'}, 'brand': {'uniqlo'}}
         return 'fixture:' + seed.name.lower() if seed.name.lower() in known.get(seed.category, set()) else None
 
-    async def discover(self, ids, destination, entity_ids=None, page=1):
+    async def discover(self, ids, destination, entity_ids=None, page=1, *args, **kwargs):
         if destination.casefold().strip() != 'chicago' or page > 1:
             return []
         # Explicitly synthetic preference-specific orderings; never Qloo recordings.
@@ -35,3 +35,6 @@ class FixtureClient:
                           taste_rank=rank+1, taste_score=1-rank/max(1,len(order)-1), cost=DATA[i][3],
                           accessible=DATA[i][4], dietary=['vegetarian'] if DATA[i][1] == 'dining' else ['vegetarian', 'vegan'])
                 for rank,i in enumerate(order)]
+
+    async def search_places(self, query: str, *args, **kwargs):
+        return []

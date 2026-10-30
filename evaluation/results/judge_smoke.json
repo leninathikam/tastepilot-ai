@@ -1,7 +1,7 @@
 {
-  "checked_at": "2026-10-30T16:27:04.219Z",
-  "base_url": "https://tastepilot-ai-43e15cc919d5.herokuapp.com",
-  "public_verified": true,
+  "checked_at": "2026-10-30T17:35:15.798Z",
+  "base_url": "http://127.0.0.1:3000",
+  "public_verified": false,
   "four_profile_workflow": true,
   "qloo_calls": 9,
   "candidates": 20,

@@ -14,6 +14,7 @@ class Companion(BaseModel):
     seeds: list[Seed] = Field(min_length=1, max_length=3)
     interests: list[str] = Field(default_factory=list, max_length=10)
     dietary: Literal['none', 'vegetarian', 'vegan'] = 'none'
+    allergies: list[str] = Field(default_factory=list, max_length=10)
     accessible: bool = False
     budget: float | None = Field(default=None, ge=0, le=10000, allow_inf_nan=False)
 
@@ -24,6 +25,8 @@ class Companion(BaseModel):
             raise ValueError('Companion label must be nonempty and different from You')
         if any(not s.strip() or len(s)>100 for s in self.interests):
             raise ValueError('Companion interests must be nonempty and at most 100 characters')
+        if any(not s.strip() or len(s)>100 for s in self.allergies):
+            raise ValueError('Companion allergies must be nonempty and at most 100 characters')
         return self
 
 
@@ -36,6 +39,7 @@ class Intent(BaseModel):
     seeds: list[Seed] = Field(default_factory=list, max_length=6)
     interests: list[str] = Field(default_factory=list, max_length=10)
     dietary: Literal['none', 'vegetarian', 'vegan'] = 'none'
+    allergies: list[str] = Field(default_factory=list, max_length=10)
     accessible: bool = False
     require_verified_hours: bool = False
     excluded_ids: list[str] = Field(default_factory=list, max_length=50)
@@ -50,6 +54,8 @@ class Intent(BaseModel):
             raise ValueError('At least one ranking weight must be positive')
         if any(len(x) > 100 or not x.strip() for x in self.interests):
             raise ValueError('Interests must be nonempty and at most 100 characters')
+        if any(len(x) > 100 or not x.strip() for x in self.allergies):
+            raise ValueError('Allergies must be nonempty and at most 100 characters')
         if self.companions and self.party_size < len(self.companions)+1:
             raise ValueError('Party size must include you and every companion profile')
         if len({p.label.casefold() for p in self.companions}) != len(self.companions):
@@ -89,6 +95,9 @@ class Candidate(BaseModel):
     accessible: bool | None = None
     dietary: list[str] | None = None
     available_date: date | None = None
+    hours: dict | None = None
+    price_level: int | None = None
+    is_dining: bool = False
     score: float = 0
     preference_score: float = 0
     explanation: str = ''

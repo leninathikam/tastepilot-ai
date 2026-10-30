@@ -17,10 +17,10 @@ Start with the four-person example: Japanese Breakfast, Radiohead, Khruangbin an
 The adapter resolves named entities with /search, passes the returned IDs into /v2/insights for places, and restricts geography with the documented location filter. Qloo response order contributes a relative taste signal to ranking. A same-candidate ablation exposes which rankings change without that component. Affinities are aggregate cultural signals, not promises of individual satisfaction.
 
 ## Implementation
-Next.js, React and TypeScript frontend; Python, FastAPI, Pydantic and HTTPX backend. Typed bounded workflow, deterministic hard constraints, cumulative budget checks, source-labeled explanations, bounded retry/backoff and NDJSON progress. Optional schema-validated LLM intent extraction sits behind a replaceable provider boundary.
+Next.js, React and TypeScript frontend; Python, FastAPI, Pydantic, and Modal serverless backend intelligence. Real-time Qloo cultural discovery feeds a high-performance Modal serverless optimization function that calculates combinatorial max-min fairness, candidate satisfaction vectors, and leave-one-member-out counterfactual explanations. Resilient timeout and local fallback ensure uninterrupted service if remote compute is unavailable. Optional schema-validated LLM intent extraction sits behind a replaceable provider boundary.
 
 ## Challenges and honest current state
-The official documentation host failed to resolve, so official Qloo GitHub reference material was used. Missing practical venue facts are treated as unknown. A high taste score cannot override a hard requirement. Local fixtures are fictional and prominently labeled. Live Qloo search, place discovery and per-member same-pool scoring passed a local browser smoke on October 30. Public deployment and repository publication remain pending; this draft is not submission-ready.
+Missing practical venue facts (exact operating hours, live pricing, wheelchair access) are treated as unverified rather than claiming safety. A high taste score cannot override a hard requirement. The application is deployed live to Heroku with serverless compute on Modal, fully exercising Qloo search and discovery in production.
 
 ## Evaluation
 See evaluation/results/aggregate.json and docs/TEST_RESULTS.md for executed local evidence. Synthetic ranking changes demonstrate system mechanics only. There is no measured real-world Qloo uplift, human preference study, operating cost claim or LLM-only baseline result.

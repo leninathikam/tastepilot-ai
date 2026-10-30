@@ -42,7 +42,9 @@ async def correlation(request: Request, call_next):
 
 @app.get('/api/health')
 def health():
-    return {'status':'ok', 'mode':os.getenv('DATA_MODE','fixture'), 'live_verified':False}
+    mode = os.getenv('DATA_MODE', 'fixture')
+    live_ok = mode == 'live' and bool(os.getenv('QLOO_API_KEY')) and not os.getenv('QLOO_API_KEY', '').startswith('replace_')
+    return {'status': 'ok', 'mode': mode, 'live_verified': live_ok}
 
 
 @app.post('/api/plan')

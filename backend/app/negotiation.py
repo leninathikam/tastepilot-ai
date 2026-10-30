@@ -3,17 +3,30 @@ from itertools import combinations
 from .models import MemberEvidence
 
 
+FOOD_MODIFIERS = (' food', ' cuisine', ' meals', ' cooking', ' restaurant')
+
+
 def profiles(intent):
     return [{'label':'You','seeds':intent.seeds,'interests':intent.interests}]+[
         {'label':p.label,'seeds':p.seeds,'interests':p.interests} for p in intent.companions]
 
 
+def matches_tag(interest: str, normalized_tags: set[str]) -> bool:
+    if interest in normalized_tags:
+        return True
+    for mod in FOOD_MODIFIERS:
+        if interest.endswith(mod):
+            stem = interest[:-len(mod)].strip()
+            if stem in normalized_tags:
+                return True
+    return False
+
+
 def alignment(tags, interests):
-    # Exact normalized tag comparison avoids 'art' matching 'party'. No inferred synonyms.
-    normalized={s.casefold().strip() for s in tags}
-    unique=list(dict.fromkeys(s.casefold().strip() for s in interests))
-    matched=[s for s in unique if s in normalized]
-    return len(matched)/max(1,len(unique)), matched
+    normalized = {s.casefold().strip() for s in tags}
+    unique = list(dict.fromkeys(s.casefold().strip() for s in interests))
+    matched = [s for s in unique if matches_tag(s, normalized)]
+    return len(matched) / max(1, len(unique)), matched
 
 
 async def attach_member_evidence(candidates, member_profiles, resolutions, client, intent, mode):
