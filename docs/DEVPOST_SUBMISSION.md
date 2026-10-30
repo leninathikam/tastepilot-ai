@@ -30,7 +30,7 @@ The intended benefit is less repetitive search and more transparent personalizat
 
 ## Required links
 - Public application: PENDING
-- Public source repository: PENDING
+- Public source repository: https://github.com/leninathikam/tastepilot-ai
 - License: MIT, LICENSE in repository root
 - Setup and testing: README.md
 
